@@ -36,14 +36,9 @@ Route::middleware(['auth'])->group(function () {
 
 
 
-    Route::get('/nada', function () {
-        return view('nda');
-    });
+    Route::get('/show/publicacion/{publicacion}', [PublicacionController::class, 'show'])->name('show/publicacion');
 
-    /* Route::get('/publicaciones/index', [PublicacionController::class, 'index'])->name('index'); */
-
-    Route::get('/show/{publicacion}', [PublicacionController::class, 'show'])->name('show');
-
+    Route::get('/show/{producto}', [ProductoController::class, 'show'])->name('show');
 
     Route::resource('carritos', CarritoController::class);
 
@@ -51,7 +46,10 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('perfil', PerfilController::class);
 
-    Route::get('view-category/{slug}', [ProductsController::class,'viewcategory']);
+    Route::resource('liveware', Livewire::class);
+
+    Route::post('/anadircomentario', [ComentarioController::class, 'anadircomentario'])
+    ->name('anadircomentario');
 
     Route::resource('publicaciones', PublicacionController::class);
 

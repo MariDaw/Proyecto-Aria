@@ -19,7 +19,7 @@
                                                 <div class="group relative">
                                                     <div
                                                         class=" aspect-w-1 aspect-h-1 w-[500px] h-[600px] overflow-hidden rounded-md bg-gray-200  ">
-                                                        <a href="{{route('show', [$publicacion])}}">
+                                                        <a href="{{route('show/publicacion', [$publicacion])}}">
 
                                                         <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
                                                             alt="Front of men&#039;s Basic Tee in black."
