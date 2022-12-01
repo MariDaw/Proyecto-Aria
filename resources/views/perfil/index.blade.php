@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Productos') }}
+            {{ __('Perfil') }}
         </h2>
     </x-slot>
 
@@ -12,38 +12,15 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <x-plantilla>
-                        <table class="table-auto">
-                            <thead>
-                                <th class="px-6 py-2 text-gray-500">
-                                    Codigo
-                                </th>
-                                <th class="px-6 py-2 text-gray-500">
-                                    Descripción
-                                </th>
-                                <th class="px-6 py-2 text-gray-500">
-                                    Precio
-                                </th>
-                            </thead>
-                            <tbody>
-                                @foreach ($productos as $producto)
-                                    <tr>
-                                        <td class="px-6 py-2">{{ $producto->titulo }}</td>
-                                        <td class="px-6 py-2">{{ $producto->descripcion }}</td>
-                                        <td class="px-6 py-2">{{ $producto->precio }}</td>
-                                        <td>
+                        <div class="flex w-full ">
+                            <h1 class="items-start text-3xl text-gray-500">
+                                Perfil
+                            </h1>
 
-                                            <div class="text-sm text-gray-900 ">
-                                                <form action="{{ route('anadiralcarrito', $producto) }}" method="POST">
-                                                    @csrf
-                                                    @method('POST')
-                                                    <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Añadir al carrito</button>
-                                                </form>
-                                            </div>
-                                        </td>
-                                    </tr>
-                                @endforeach
-                            </tbody>
-                        </table>
+
+                            <h2 class=" justify-end ml-80 text-3xl text-black ">{{ $perfil->user_id }}</h2>
+
+                        </div>
                     </x-plantilla>
                 </div>
             </div>

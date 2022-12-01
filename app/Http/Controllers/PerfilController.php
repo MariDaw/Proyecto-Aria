@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePerfilRequest;
 use App\Http\Requests\UpdatePerfilRequest;
+use App\Models\Famoso;
 use App\Models\Perfil;
+use App\Models\Publicacion;
+use App\Models\Valoracion;
+use Illuminate\Support\Facades\Auth;
 
 class PerfilController extends Controller
 {
@@ -15,7 +19,18 @@ class PerfilController extends Controller
      */
     public function index()
     {
+        $perfil = Perfil::all();
+        $perfil->user_id = Auth::user()->name;
+        $famosos = Famoso::all();
+        $publicacion = Publicacion::all();
+        $valoraciones = Valoracion::all();
 
+        return view('perfil.index', [
+            'perfil' => $perfil,
+            'famosos' => $famosos,
+            'valoraciones' => $valoraciones,
+
+        ]);
     }
 
     /**

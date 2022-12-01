@@ -837,6 +837,9 @@ select {
 .mr-3 {
   margin-right: 0.75rem;
 }
+.ml-80 {
+  margin-left: 20rem;
+}
 .block {
   display: block;
 }
@@ -993,6 +996,9 @@ select {
 }
 .flex-col {
   flex-direction: column;
+}
+.items-start {
+  align-items: flex-start;
 }
 .items-center {
   align-items: center;
@@ -1295,6 +1301,10 @@ select {
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
 }
 .font-medium {
   font-weight: 500;
