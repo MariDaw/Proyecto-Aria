@@ -52,7 +52,11 @@
                                                         <p class="mt-1 text-sm text-gray-500">
                                                             {{ $publicacion->descripcion }}</p>
 
-
+                                                            <form action="{{ route('anadiralperfil', $publicacion) }}" method="POST">
+                                                                @csrf
+                                                                @method('POST')
+                                                                <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Save</button>
+                                                            </form>
                                                             <p class="text-red-400">
                                                                 @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null)
                                                                 0 likes

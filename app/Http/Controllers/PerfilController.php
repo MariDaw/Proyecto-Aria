@@ -7,6 +7,7 @@ use App\Http\Requests\UpdatePerfilRequest;
 use App\Models\Famoso;
 use App\Models\Perfil;
 use App\Models\Publicacion;
+use App\Models\Save;
 use App\Models\Valoracion;
 use Illuminate\Support\Facades\Auth;
 
@@ -23,11 +24,13 @@ class PerfilController extends Controller
         $perfil->user_id = Auth::user()->name;
         $famosos = Famoso::all();
         $publicacion = Publicacion::all();
+        $saves = Save::all();
         $valoraciones = Valoracion::all();
 
         return view('perfil.index', [
             'perfil' => $perfil,
             'famosos' => $famosos,
+            'saves' => $saves->where('user_id', Auth::user()->id),
             'valoraciones' => $valoraciones,
 
         ]);

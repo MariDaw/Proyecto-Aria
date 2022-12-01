@@ -840,6 +840,9 @@ select {
 .ml-80 {
   margin-left: 20rem;
 }
+.mt-20 {
+  margin-top: 5rem;
+}
 .block {
   display: block;
 }
@@ -893,6 +896,9 @@ select {
 }
 .h-96 {
   height: 24rem;
+}
+.h-auto {
+  height: auto;
 }
 .min-h-screen {
   min-height: 100vh;

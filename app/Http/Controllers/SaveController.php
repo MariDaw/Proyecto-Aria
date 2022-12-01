@@ -4,7 +4,11 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreSaveRequest;
 use App\Http\Requests\UpdateSaveRequest;
+use App\Models\Famoso;
+use App\Models\Publicacion;
 use App\Models\Save;
+use App\Models\Valoracion;
+use Illuminate\Support\Facades\Auth;
 
 class SaveController extends Controller
 {
@@ -15,7 +19,15 @@ class SaveController extends Controller
      */
     public function index()
     {
-        //
+        $valoraciones = Valoracion::all();
+        $publicaciones = Publicacion::all();
+        $famosos = Famoso::all();
+
+        return view('publicaciones.index', [
+            'publicaciones' => $publicaciones,
+            'famosos' => $famosos,
+            'valoraciones' => $valoraciones,
+        ]);
     }
 
     /**
@@ -36,7 +48,7 @@ class SaveController extends Controller
      */
     public function store(StoreSaveRequest $request)
     {
-        //
+
     }
 
     /**
@@ -82,5 +94,25 @@ class SaveController extends Controller
     public function destroy(Save $save)
     {
         //
+    }
+
+    public function anadiralperfil(Publicacion $publicacion)
+    {
+        $save = Save::where('publicacion_id', $publicacion->id)->where('user_id', auth()->user()->id)->first();
+
+        if (empty($save)) {
+            $save = new Save();
+
+            $save->user_id = Auth::user()->id;
+            $save->publicacion_id = $publicacion->id;
+
+            $save->save();
+
+            return redirect()->route('publicaciones.index')->with('success', 'Publicación añadida al perfil.');
+        }
+
+        $save->save();
+
+        return redirect()->route('publicaciones.index')->with('success', 'Publicación añadida al perfil.');
     }
 }

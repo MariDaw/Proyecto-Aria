@@ -4,6 +4,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\PublicacionController;
 use App\Http\Controllers\PerfilController;
+use App\Http\Controllers\SaveController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ValoracionController;
@@ -54,6 +55,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/store/{publicacion}', [ValoracionController::class, 'store'])
     ->name('store');
+
+    Route::post('/publicaciones/save/{publicacion}', [SaveController::class, 'anadiralperfil'])
+        ->name('anadiralperfil');
 
     Route::post('/anadircomentario', [ComentarioController::class, 'anadircomentario'])
     ->name('anadircomentario');
