@@ -4,7 +4,7 @@
             <div class="p-6 flex bg-white border-b border-gray-200">
                 <x-plantilla>
  <div class="bg-white">
-        <select name="famosoSelect" id="famosoSelect" wire:model="famosoSelect">
+        <select class="rounded-lg" name="famosoSelect" id="famosoSelect" wire:model="famosoSelect">
             <option value="All" selected>All</option>
             @foreach ($famosos as $famoso)
            <option value="{{$famoso->nombre}}" >{{$famoso->nombre}}</option>
@@ -15,9 +15,9 @@
        <form action="{{url('/search')}}" method="POST" role="search">
         {{csrf_field()}}
         <div class="input-group">
-          <input type="text" class="form-control" name="q" placeholder="Search for"><span class="input-group-btn">
+          <input type="text" class="form-control border-b-2" name="q" placeholder="Search for"><span class="input-group-btn">
            <button type="submit" class="btn btn-info">
-       <i class="fas fa-search fa-sm"></i> Search
+       <i class="fas fa-search border-b-2 fa-sm"></i> Search
       </button>
           </span>
 

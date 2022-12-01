@@ -23,9 +23,10 @@
                         </div>
                         <div class="flex w-full h-auto  mt-20">
                             <div class="">
-                                <h3 class="text-black text-2xl">PUBLICACIONES GUARDADAS</h3>
+
                                 <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                                    <h2 class="text-2xl font-bold tracking-tight text-gray-900">PUBLICACIONES GUARDADAS
+
+                                    <h2 class="text-2xl flex p-2 w-2/5 tracking-tight text-gray-600" style="font-family: 'Roboto Condensed', sans-serif; background-color: #7283E1;"><img class="mr-3" src="img/save.png" alt=""> PUBLICACIONES GUARDADAS
                                     </h2>
 
                                     <div
