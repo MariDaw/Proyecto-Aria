@@ -1,57 +1,77 @@
 <nav x-data="{ open: false }" class="bg-white border-b border-gray-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 bg-red-200">
-        <div class="flex justify-between h-16">
+    <div class="max-w-7xl mx-auto px-0 sm:px-0 lg:px-0 bg-red-200">
+        <div class="flex justify-between h-32">
             <div class="flex">
                 <!-- Primary Navigation Menu -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('publicaciones.index') }}">
+                    <a href="{{ route('dashboard') }}">
                         <x-application-logo class="block h-10 w-auto fill-current" />
                     </a>
                 </div>
                 <!-- Logo -->
 
-                <!-- Navigation Links -->
 
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('publicaciones.index')" :active="request()->routeIs('publicaciones.index')">
-                        {{ __('Publicaciones') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
-                        {{ __('Productos') }}
-                    </x-nav-link>
-                    <x-nav-link :href="route('carritos.index')" :active="request()->routeIs('carritos.index')">
-                        {{ __('Carrito') }} ({{ Auth::user()->carritos()->sum('cantidad') }})
-                    </x-nav-link>
-                    <x-nav-link :href="route('carritos.index')" :active="request()->routeIs('carritos.index')">
-                        {{ __('Perfil') }}
-                    </x-nav-link>
-                    <div class="flex justify-center">
-                        <div class="mb-3 xl:w-86 ml-96 mt-4">
-                          <input
-                            type="search"
-                            class="form-control
-                              block
-                              w-full
-                              px-3
-                              py-1.5
-                              text-base
-                              font-normal
-                              text-gray-700
-                              bg-white bg-clip-padding
-                              border border-solid border-gray-300
-                              rounded
-                              transition
-                              ease-in-out
-                              m-0
-                              focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-                            "
-                            id="exampleSearch"
-                            placeholder="Search"
-                          />
+            </div>
+        </div>
+        <!-- Navigation Links -->
+        <div class="hidden w-full space-x-0 sm:-my-px  sm:flex bg-white">
+            <div class="w-52 py-2 px-3" style="background-color: #7283E1; display:flex; justify-content:center; align-items:center;">
+                <x-nav-link :href="route('publicaciones.index')" :active="request()->routeIs('publicaciones.index')">
+                    {{ __('Publicaciones') }}
+                </x-nav-link>
+            </div>
+            <div class="bg-yellow-200 w-52 py-2 px-3" style="background-color: #fcde468a; display:flex; justify-content:center; align-items:center; ">
+            <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+                {{ __('Productos') }}
+            </x-nav-link>
+            </div>
+            <div class="bg-blue-400 w-52 py-2 px-3" style="background-color: #FF0505; display:flex; justify-content:center; align-items:center;">
+            <x-nav-link :href="route('carritos.index')" :active="request()->routeIs('carritos.index')">
+                {{ __('Carrito') }} ({{ Auth::user()->carritos()->sum('cantidad') }})
+            </x-nav-link>
+            </div>
+            <div class="bg-green-300 w-52 py-2 px-3" style="background-color: #7283E1; display:flex; justify-content:center; align-items:center;">
+            <x-nav-link :href="route('perfil.index')" :active="request()->routeIs('perfil.index')">
+                {{ __('Perfil') }}
+            </x-nav-link>
+            </div>
+            <div class="flex justify-center">
+                <div class="mb-3 py-6 xl:w-86 ml-96 mt-4">
+                  <input
+                    type="search"
+                    class="form-control
+                      block
+                      w-full
+                      px-3
+                      py-10
+                      text-base
+                      font-normal
+                      text-gray-700
+                      bg-white bg-clip-padding
+                      border border-solid border-gray-300
+                      rounded
+                      transition
+                      ease-in-out
+                      hidden
+                      m-0
+                      focus:text-gray-700 focus:bg-white focus:border-red-500 focus:outline-none
+                    "
+                    id="exampleSearch"
+                    placeholder="Search"
+                  />
+                </div>
+                {{-- <div>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Change Language
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">English</a>
+                          <a class="dropdown-item" href="#">Spanish</a>
                         </div>
                       </div>
-                </div>
-            </div>
+                </div> --}}
+              </div>
 
 
             <!-- Settings Dropdown -->
@@ -78,6 +98,9 @@
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
+                            </x-dropdown-link>
+                            <x-dropdown-link :href="route('perfil.index')" :active="request()->routeIs('perfil.index')">
+                                {{ __('Profile') }}
                             </x-dropdown-link>
                         </form>
                     </x-slot>
