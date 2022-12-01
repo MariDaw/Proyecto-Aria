@@ -6,6 +6,7 @@ use App\Http\Controllers\PublicacionController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ValoracionController;
 use App\Http\Controllers\UserController;
 use App\Models\Publicacion;
 use Illuminate\Support\Facades\Route;
@@ -47,6 +48,12 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('perfil', PerfilController::class);
 
     Route::resource('liveware', Livewire::class);
+
+    Route::post('/destroy/{publicacion}', [ValoracionController::class, 'destroy'])
+    ->name('destroy');
+
+    Route::post('/store/{publicacion}', [ValoracionController::class, 'store'])
+    ->name('store');
 
     Route::post('/anadircomentario', [ComentarioController::class, 'anadircomentario'])
     ->name('anadircomentario');

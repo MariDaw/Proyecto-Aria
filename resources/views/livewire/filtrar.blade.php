@@ -49,8 +49,18 @@
                                                             </a>
                                                         </h3>
 
+                                                        <p class="mt-1 text-sm text-gray-500">
+                                                            {{ $publicacion->descripcion }}</p>
 
 
+                                                            <p class="text-red-400">
+                                                                @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null)
+                                                                0 likes
+                                                                @else
+                                                                 {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}}
+                                                                    likes
+                                                                @endif
+                                                                </p>
                                                         <div>
 
                                                         </div>

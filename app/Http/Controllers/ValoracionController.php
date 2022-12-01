@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreValoracionRequest;
 use App\Http\Requests\UpdateValoracionRequest;
+use App\Models\Publicacion;
 use App\Models\Valoracion;
+use Illuminate\Support\Facades\Auth;
 
 class ValoracionController extends Controller
 {
@@ -34,9 +36,16 @@ class ValoracionController extends Controller
      * @param  \App\Http\Requests\StoreValoracionRequest  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreValoracionRequest $request)
+    public function store(Publicacion $publicacion)
     {
-        //
+        $valoracion = new Valoracion();
+
+        $valoracion->publicacion_id = $publicacion->id;
+        $valoracion->user_id = Auth::user()->id;
+
+        $valoracion->save();
+
+        return redirect()->back();
     }
 
     /**
@@ -79,8 +88,18 @@ class ValoracionController extends Controller
      * @param  \App\Models\Valoracion  $valoracion
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Valoracion $valoracion)
+    public function destroy(Publicacion $publicacion)
     {
-        //
+        while (count(Valoracion::where('user_id', Auth::user()->id)->where('publicacion_id', $publicacion->id)->get()) > 0) {
+
+            Valoracion::where('user_id', Auth::user()->id)->where('publicacion_id', $publicacion->id)->delete();
+        }
+
+        return redirect()->back();
+    }
+
+    public static function isLiked(Publicacion $publicacion)
+    {
+        return count(Valoracion::where('user_id', Auth::user()->id)->where('publicacion_id', $publicacion->id)->get()) !=0;
     }
 }

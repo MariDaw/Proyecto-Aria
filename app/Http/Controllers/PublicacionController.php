@@ -6,6 +6,7 @@ use App\Http\Requests\StorePublicacionRequest;
 use App\Http\Requests\UpdatePublicacionRequest;
 use App\Models\Famoso;
 use App\Models\Publicacion;
+use App\Models\Valoracion;
 
 class PublicacionController extends Controller
 {
@@ -19,10 +20,12 @@ class PublicacionController extends Controller
 
         $publicaciones = Publicacion::all();
         $famosos = Famoso::all();
+        $valoraciones = Valoracion::all();
 
         return view('publicaciones.index', [
             'publicaciones' => $publicaciones,
             'famosos' => $famosos,
+            'valoraciones' => $valoraciones,
         ]);
     }
 
@@ -55,8 +58,11 @@ class PublicacionController extends Controller
      */
     public function show(Publicacion $publicacion)
     {
+        $valoraciones = Valoracion::all();
+
         return view('publicaciones.show', [
             'publicacion' => $publicacion,
+            'valoraciones' => $valoraciones,
         ]);
     }
 

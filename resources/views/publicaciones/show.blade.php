@@ -5,6 +5,91 @@
         </h2>
     </x-slot>
 
+    <style>
+        @charset "utf-8";
+        #container {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 8%;
+          height: 1vh;
+          padding: 0px 0px;
+          margin-bottom: 30px;
+          margin-left: 0px;
+          /* border: 1px solid red; */
+        }
+        .heart-like-button {
+          position: relative;
+          width: 30px;
+          height: 30px;
+        }
+        .heart-like-button:before {
+          position: absolute;
+          top: 0;
+          left: 15px;
+          transform: rotate(-45deg);
+          transform-origin: 0 100%;
+          width: 17px;
+          height: 27px;
+          border-radius: 40px 40px 0 0;
+        /*   background-color: #574136;
+         */  content: "";
+         background-color: #d65076;
+          cursor: pointer;
+          transition: background .4s;
+        }
+        .heart-like-button:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotate(45deg);
+          transform-origin :100% 100%;
+          width: 17px;
+          height: 27px;
+          border-radius: 40px 40px 0 0;
+        /*   background-color: #574136;
+         */  content: "";
+         background-color: #d65076;
+          cursor: pointer;
+          transition: background .4s;
+        }
+        h1 {
+          margin: 0;
+        /*   color: #574136; */
+          color: #d65076;
+          font-size: 3rem;
+          letter-spacing: 1px;
+          text-align: center;
+        }
+        .heart-like-button.liked::before,
+        .heart-like-button.liked::after {
+          background-color: #d65076;
+        }
+        .heart-like-button.liked {
+          animation: liked .4s ease;
+        }
+        @keyframes liked {
+          0% {
+            transform: scale(.8);
+          }
+          50% {
+            transform: scale(1.1);
+          }
+          100% {
+            transform: scale(1);
+          }
+        }
+        @media screen and (max-width: 480px) {
+          #container {
+            height: auto;
+          }
+          h1 {
+            font-size: 2.5rem;
+          }
+        }
+                </style>
+
     <div class="py-12">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
@@ -36,6 +121,44 @@
                                                                     {{ $publicacion->famoso->nombre }}
                                                                 </a>
                                                             </h3>
+                                                            <p class="mt-1 text-sm text-gray-500">
+                                                                {{ $publicacion->descripcion }}</p>
+
+                                                                <p class="text-red-400">
+                                                                    @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null)
+                                                                    0 likes
+                                                                    @else
+                                                                    {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}}
+                                                                    likes
+                                                                    @endif
+
+                                                                    @if (App\Http\Controllers\ValoracionController::isLiked($publicacion))
+                                                                    <form action="{{ route('destroy', $publicacion) }}" method="POST">
+                                                                      @csrf
+                                                                      @method('POST')
+
+                                                                      <button type="submit">
+                                                                    <div id="container">
+                                                                      <div class="heart-like-button">
+                                                                      </div>
+                                                                    </div>
+                                                                  </button>
+                                                                  </form>
+                                                                      @else
+
+                                                                      <form action="{{ route('store', $publicacion) }}" method="POST">
+                                                                          @csrf
+                                                              @method('POST')
+
+                                                                          <button type="submit">
+                                                                    <div id="container">
+                                                                      <div class="heart-like-button">
+                                                                      </div>
+                                                                    </div>
+                                                                  </button>
+                                                                        </form>
+                                                                      @endif
+                                                                  </p>
 
                                                               <form class="w-auto mt-10" action="{{ route('anadircomentario') }}"
                                                                   method="POST">
@@ -97,5 +220,21 @@
                                 </div>
                                 </div>
                                 </div>
+
+                                <script defer>
+                                    const button = document.querySelector(".heart-like-button");
+                                    if (button.classList.contains("liked")) {
+                                    button.classList.remove("liked");
+                                  } else {
+                                    button.classList.add("liked");
+                                  }
+                                button.addEventListener("click", () => {
+                                  if (button.classList.contains("liked")) {
+                                    button.classList.remove("liked");
+                                  } else {
+                                    button.classList.add("liked");
+                                  }
+                                });
+                                </script>
 
 </x-app-layout>
