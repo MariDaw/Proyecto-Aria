@@ -7,7 +7,7 @@ use App\Models\Publicacion;
 use App\Models\Valoracion;
 use Livewire\Component;
 
-class Filtrado extends Component
+class Filtrar extends Component
 {
 
 
@@ -31,7 +31,7 @@ class Filtrado extends Component
 
         $famosos = Famoso::all();
         $valoraciones = Valoracion::all();
-        return view('livewire.filtrado', [
+        return view('livewire.filtrar', [
             'publicaciones' => $publicaciones,
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,

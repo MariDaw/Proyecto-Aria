@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StorePublicacionRequest;
 use App\Http\Requests\UpdatePublicacionRequest;
+use App\Models\Famoso;
 use App\Models\Publicacion;
 
 class PublicacionController extends Controller
@@ -17,9 +18,11 @@ class PublicacionController extends Controller
     {
 
         $publicaciones = Publicacion::all();
+        $famosos = Famoso::all();
 
         return view('publicaciones.index', [
             'publicaciones' => $publicaciones,
+            'famosos' => $famosos,
         ]);
     }
 
