@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreComentarioRequest;
 use App\Http\Requests\UpdateComentarioRequest;
 use App\Models\Comentario;
+use Illuminate\Support\Facades\Auth;
 
 class ComentarioController extends Controller
 {
@@ -82,5 +83,24 @@ class ComentarioController extends Controller
     public function destroy(Comentario $comentario)
     {
         //
+    }
+
+    public function anadircomentario()
+    {
+        $validados = request()->validate([
+            'comentario' => 'required|string|max:100',
+            'publicacion' => 'required',
+        ]);
+
+        $comentario = new Comentario();
+
+        $comentario->publicacion_id = $validados['publicacion'];
+        $comentario->user_id = Auth::user()->id;
+        $comentario->texto = $validados['comentario'];
+        $comentario->save();
+
+        return redirect()->back();
+
+
     }
 }

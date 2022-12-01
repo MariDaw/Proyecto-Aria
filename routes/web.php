@@ -7,7 +7,6 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ZapatoController;
 use App\Models\Publicacion;
 use Illuminate\Support\Facades\Route;
 
@@ -43,7 +42,7 @@ Route::middleware(['auth'])->group(function () {
 
     /* Route::get('/publicaciones/index', [PublicacionController::class, 'index'])->name('index'); */
 
-
+    Route::get('/show/{publicacion}', [PublicacionController::class, 'show'])->name('show');
 
 
     Route::resource('carritos', CarritoController::class);

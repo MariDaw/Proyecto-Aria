@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('perfils', function (Blueprint $table) {
+        Schema::create('saves', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users');
             $table->foreignId('publicacion_id')->constrained('publicacions');
-            $table->string('texto');
+            $table->string('texto')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('perfils');
+        Schema::dropIfExists('saves');
     }
 };
