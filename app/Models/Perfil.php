@@ -9,5 +9,16 @@ class Perfil extends Model
 {
     use HasFactory;
 
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 
+    public function publicaciones(){
+        return $this->hasMany(Publicacion::class);
+    }
+
+    public function saves(){
+        return $this->hasMany(Save::class);
+    }
 }

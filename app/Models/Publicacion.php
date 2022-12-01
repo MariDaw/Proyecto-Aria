@@ -21,4 +21,14 @@ class Publicacion extends Model
     public function valoraciones(){
         return $this->hasMany(Valoracion::class);
     }
+
+    public function likes()
+    {
+        return $this->hasMany(Valoracion::class);
+    }
+
+    public function saves()
+    {
+        return $this->hasMany(Save::class);
+    }
 }

@@ -51,4 +51,14 @@ class User extends Authenticatable
     {
         return $this->hasMany(Factura::class);
     }
+
+    public function perfil()
+    {
+        return $this->belongsTo(Perfil::class);
+    }
+
+    public function likes()
+    {
+        return $this->hasMany(Valoracion::class);
+    }
 }
