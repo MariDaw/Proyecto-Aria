@@ -110,6 +110,7 @@
                             <x-dropdown-link :href="route('perfil.index')" :active="request()->routeIs('perfil.index')">
                                 {{ __('Profile') }}
                             </x-dropdown-link>
+
                         </form>
                     </x-slot>
                 </x-dropdown>

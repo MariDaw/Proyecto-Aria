@@ -12,17 +12,12 @@
            @endforeach
 
        </select>
-       <form action="{{url('/search')}}" method="POST" role="search">
-        {{csrf_field()}}
-        <div class="input-group">
-          <input type="text" class="form-control border-b-2" name="q" placeholder="Search for"><span class="input-group-btn">
-           <button type="submit" class="btn btn-info">
-       <i class="fas fa-search border-b-2 fa-sm"></i> Search
-      </button>
-          </span>
 
-        </div>
-      </form>
+      {{-- {{ $query}} --}}
+      <div>
+        <input wire:model.debounce.1000ms="famosoSelect" type="search" placeholder="Search" class="shadow appearance-none border rounded w-full py-2 -m-3
+        text-gray-700 mt-10 leading-tight focus:outline-none focus:shadow-outline placeholder-blue-400" name="" id="">
+    </div>
 
        <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2>
