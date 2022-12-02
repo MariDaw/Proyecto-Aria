@@ -56,10 +56,38 @@ class Filtrar extends Component
         $valoraciones = Valoracion::all();
         return view('livewire.filtrar', [
             'publicaciones' => $publicaciones,
-            'publicaciones' => Publicacion::paginate(4),
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,
             'query' => $query,
+        ]);
+        /* dd($this->famosoSelect); */
+
+    }
+
+    public function paginador()
+    {   $publicaciones = Famoso::where('nombre', $this->famosoSelect)
+                    ->when( $this->famosoSelect, function($query) {
+                        return $query->where(function ($query) {
+                            $query->where('nombre', 'like', '%'.$this->famosoSelect . '%');
+                        });
+
+                    })
+
+            ->when($this->active, function( $query){
+                return $query->active();
+            });
+            $query = $publicaciones->toSql();
+
+
+
+        $famosos = Famoso::all();
+        $valoraciones = Valoracion::all();
+        return view('livewire.filtrar', [
+            'publicaciones' => $publicaciones,
+            'publicaciones' => Publicacion::paginate(4),
+            'famosos' => $famosos,
+            'valoraciones' => $valoraciones,
+
         ]);
         /* dd($this->famosoSelect); */
 

@@ -14,7 +14,7 @@
             </div>
         </div>
         <!-- Navigation Links -->
-        <div class="hidden w-full space-x-0 sm:-my-px  sm:flex bg-white">
+        <div class="hidden w-full space-x-0 sm:-my-px  sm:flex " style="background-color: WHITE;">
             <div class="w-52 py-2 px-3" style="background-color: #2bce90d0; display:flex; justify-content:center; align-items:center;">
                 <x-nav-link :href="route('dashboard')" >
                     <img class="flex ml-12 hover:scale-110" src="{{url('../img/hogar.png') }}" alt="Home">

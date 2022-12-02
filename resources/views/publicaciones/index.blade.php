@@ -5,13 +5,6 @@
         </h2>
     </x-slot>
 
-
-
-
-
                             <livewire:filtrar/>
-
-
-
 
 </x-app-layout>

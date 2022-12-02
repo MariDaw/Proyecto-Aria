@@ -7,10 +7,12 @@
     </x-slot>
 
     <div class="py-12">
-        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-0">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 bg-white border-b border-gray-200">
-                    See more!
+                    <a href="{{ route('publicaciones.index') }}" class="flex font-semibold justify-start text-indigo-600 text-sm mt-2">
+                        See more!
+                      </a>
                     <div class="flex ">
                         <img class="border-1 m-2 w-auto h-auto" src="img/home2.jpg"  alt="Home Explorer">
                         <img class="border-1 m-2 w-auto h-auto" src="img/home3.jpg"  alt="Home Explorer">
@@ -21,10 +23,10 @@
                         <h3 class="text-xl text-black ">OUR BRANDS!</h3>
                     </div>
                     <div class="flex ">
-                        <img class="border-1 m-2" src="img/hym.jpg" width="150px" height="150px" alt="Brands">
-                        <img class="border-1 m-2" src="img/zara.jpg" width="150px" height="150px" alt="Brands">
-                        <img class="border-1 m-2" src="img/pyb.jpg" width="150px" height="150px" alt="Brands">
-                        <img class="border-1 m-2" src="img/urban.jpg" width="150px" height="150px" alt="Brands">
+                        <a href="https://www2.hm.com/es_es/index.html"><img class="border-1 m-2" src="img/hym.jpg" width="150px" height="150px" alt="Brands"></a>
+                        <a href="https://www.zara.com/es/"><img class="border-1 m-2" src="img/zara.jpg" width="150px" height="150px" alt="Brands"></a>
+                        <a href="https://www.pullandbear.com/es/"><img class="border-1 m-2" src="img/pyb.jpg" width="150px" height="150px" alt="Brands"></a>
+                        <a href="https://www.urbanoutfitters.com/es-es/?ss=us_es"><img class="border-1 m-2" src="img/urban.jpg" width="150px" height="150px" alt="Brands"></a>
                     </div>
                 </div>
             </div>
