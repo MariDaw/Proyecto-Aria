@@ -35,7 +35,9 @@ class Filtrar extends Component
                 return $query->active();
             });
             $query = $publicaciones->toSql();
-            $publicaciones = $publicaciones->paginate(10);
+
+
+
 
 
         if ($this->famosoSelect == 'All')
@@ -54,6 +56,7 @@ class Filtrar extends Component
         $valoraciones = Valoracion::all();
         return view('livewire.filtrar', [
             'publicaciones' => $publicaciones,
+            'publicaciones' => Publicacion::paginate(4),
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,
             'query' => $query,

@@ -38,9 +38,9 @@ class FiltradoProductos extends Component
             $producto = Producto::all();
         }
          else {
-            $productoLive = Producto::where('titulo', $this->productoSelect)->get()[0]->id;
+            $productoLive = Producto::where('titulo', $this->productoSelect)->get()[0]->titulo;
 
-            $producto = Producto:: where('id', $productoLive)->get();
+            $producto = Producto:: where('titulo', $productoLive)->get();
 
 
         }

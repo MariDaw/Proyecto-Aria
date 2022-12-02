@@ -7,4 +7,5 @@
 
 
     <livewire:filtrado-productos/>
+
 </x-app-layout>
