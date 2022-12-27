@@ -14,27 +14,30 @@ class Filtrar extends Component
 
     public $famosoSelect = 'All';
 
+    public $busqueda = "";
+
     use WithPagination;
 
     public $active;
-    public $q;
+    public $query;
 
 
 
     public function render()
     {
-        $publicaciones = Famoso::where('nombre', $this->famosoSelect)
-                    ->when( $this->famosoSelect, function($query) {
-                        return $query->where(function ($query) {
-                            $query->where('nombre', 'like', '%'.$this->famosoSelect . '%');
-                        });
+        $publicaciones = Famoso::where('nombre', $this->busqueda)
+            ->when($this->busqueda, function ($query) {
+                return $query->where(function ($query) {
+                    $query->where('nombre', 'ilike', "%$this->busqueda%");
+                }
+                );
 
-                    })
-
-            ->when($this->active, function( $query){
-                return $query->active();
             });
-            $query = $publicaciones->toSql();
+
+            // ->when($this->active, function( $query){
+            //     return $query->active();
+            // });
+            // $query = $publicaciones->toSql();
 
 
 
@@ -58,40 +61,40 @@ class Filtrar extends Component
             'publicaciones' => $publicaciones,
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,
-            'query' => $query,
+            // 'query' => $query,
         ]);
         /* dd($this->famosoSelect); */
 
     }
 
-    public function paginador()
-    {   $publicaciones = Famoso::where('nombre', $this->famosoSelect)
-                    ->when( $this->famosoSelect, function($query) {
-                        return $query->where(function ($query) {
-                            $query->where('nombre', 'like', '%'.$this->famosoSelect . '%');
-                        });
+    // public function paginador()
+    // {   $publicaciones = Famoso::where('nombre', $this->famosoSelect)
+    //                 ->when( $this->famosoSelect, function($query) {
+    //                     return $query->where(function ($query) {
+    //                         $query->where('nombre', 'like', '%'.$this->famosoSelect . '%');
+    //                     });
 
-                    })
+    //                 })
 
-            ->when($this->active, function( $query){
-                return $query->active();
-            });
-            $query = $publicaciones->toSql();
+    //         ->when($this->active, function( $query){
+    //             return $query->active();
+    //         });
+    //         $query = $publicaciones->toSql();
 
 
 
-        $famosos = Famoso::all();
-        $valoraciones = Valoracion::all();
-        return view('livewire.filtrar', [
-            'publicaciones' => $publicaciones,
-            'publicaciones' => Publicacion::paginate(4),
-            'famosos' => $famosos,
-            'valoraciones' => $valoraciones,
+    //     $famosos = Famoso::all();
+    //     $valoraciones = Valoracion::all();
+    //     return view('livewire.filtrar', [
+    //         'publicaciones' => $publicaciones,
+    //         'publicaciones' => Publicacion::paginate(4),
+    //         'famosos' => $famosos,
+    //         'valoraciones' => $valoraciones,
 
-        ]);
-        /* dd($this->famosoSelect); */
+    //     ]);
+    //     /* dd($this->famosoSelect); */
 
-    }
+    // }
 
     public function updatingActive()
     {

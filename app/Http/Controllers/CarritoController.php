@@ -7,6 +7,9 @@ use App\Http\Requests\UpdateCarritoRequest;
 use App\Models\Carrito;
 use App\Models\Producto;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
+use Session;
+use Stripe;
 
 class CarritoController extends Controller
 {
@@ -151,5 +154,30 @@ class CarritoController extends Controller
         $carrito->save();
 
         return redirect()->route('carritos.index')->with('success', 'Producto sumado al carrito.');
+    }
+
+    public function stripe()
+    {
+        return view('stripe');
+    }
+
+    /**
+     * success response method.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function stripePost(Request $request)
+    {
+        Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
+        Stripe\Charge::create ([
+                "amount" => 100 * 100,
+                "currency" => "usd",
+                "source" => $request->stripeToken,
+                "description" => "Test payment from itsolutionstuff.com."
+        ]);
+
+        Session::flash('success', 'Payment successful!');
+
+        return back();
     }
 }

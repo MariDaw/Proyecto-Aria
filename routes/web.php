@@ -8,6 +8,7 @@ use App\Http\Controllers\SaveController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\ValoracionController;
 use App\Http\Controllers\UserController;
 use App\Models\Publicacion;
@@ -80,8 +81,15 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/carritos/total', [CarritoController::class, 'total'])
         ->name('total');
 
-    Route::post('/carritos/factura', [CarritoController::class, 'pedido'])
-        ->name('pedido');
+    // Route::post('/carritos/factura', [CarritoController::class, 'pedido'])
+    //     ->name('pedido');
+
+    Route::post('/carritos/factura', [StripePaymentController::class, 'stripe'])
+    ->name('stripe');
+
+    Route::get('stripe', [StripePaymentController::class, 'stripe']);
+
+    Route::post('stripe', [StripePaymentController::class, 'stripePost'])->name('stripe.post');
 });
 
 require __DIR__.'/auth.php';

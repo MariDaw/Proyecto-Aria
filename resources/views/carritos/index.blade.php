@@ -78,7 +78,7 @@
                             </form>
                         </div>
                         <div class="mt-5">
-                            <form action="{{route('pedido')}}" method="post">
+                            <form action="{{route('stripe')}}" method="post">
                                 @csrf
                                 @method('POST')
                                 <button class="bg-green-300 text-black px-7 py-2" type="submit"> Realizar pedido</button>
