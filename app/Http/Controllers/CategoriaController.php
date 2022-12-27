@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreCategoriaRequest;
 use App\Http\Requests\UpdateCategoriaRequest;
 use App\Models\Categoria;
+use App\Models\producto_categoria;
 use App\Models\Producto;
 
 class CategoriaController extends Controller
@@ -17,9 +18,11 @@ class CategoriaController extends Controller
     public function index()
     {
         $categorias = Categoria::all();
+        $prodCategorias = producto_categoria::all();
 
         return view('categorias.index', [
             'categorias' => $categorias,
+            'prodCategorias' => $prodCategorias,
         ]);
     }
 

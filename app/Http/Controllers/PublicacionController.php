@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StorePublicacionRequest;
 use App\Http\Requests\UpdatePublicacionRequest;
 use App\Models\Famoso;
+use App\Models\Comentario;
 use App\Models\Publicacion;
 use App\Models\Valoracion;
 
@@ -59,7 +60,6 @@ class PublicacionController extends Controller
     public function show(Publicacion $publicacion)
     {
         $valoraciones = Valoracion::all();
-
         return view('publicaciones.show', [
             'publicacion' => $publicacion,
             'valoraciones' => $valoraciones,

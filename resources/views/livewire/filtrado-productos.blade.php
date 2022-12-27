@@ -8,14 +8,14 @@
                         <div class="bg-white">
                             <select name="productoSelect" id="productoSelect" wire:model="productoSelect">
                                 <option value="All" selected>All</option>
-                                @foreach ($productosAll as $producto)
-                                    <option value="{{ $producto->titulo }}">{{ $producto->titulo }}</option>
+                                @foreach ($categorias as $categoria)
+                                    <option value="{{ $categoria->nombre }}">{{ $categoria->nombre }}</option>
                                 @endforeach
 
                             </select>
-                            <div class="mx-auto max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                            <div class="mx-auto mt-0 max-w-1xl py-3 sm:py-5 sm:px-0 lg:max-w-7xl lg:px-8">
                                 <h2 class="sr-only">Products</h2>
-                                {{ $query }}
+                                {{-- {{ $query }} --}}
                                 <div>
                                     <input wire:model.debounce.500ms="productoSelect" type="search" placeholder="Buscar" class="shadow appearance-none border rounded w-full py-2 -m-3
                                     text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder-blue-400" name="" id="">
@@ -33,6 +33,7 @@
                                                         class="h-full w-full object-cover object-center group-hover:opacity-75">
                                                 </div>
                                                 <h3 class="mt-4 text-sm text-gray-700">{{ $producto->titulo }}</h3>
+                                                <h2 class="mt-2 text-sm text-gray-600">{{ $producto->descripcion }}</h2>
                                                 <p class="mt-1 text-lg font-medium text-gray-900">
                                                     {{ $producto->precio }}&euro;</p>
                                                 <div class="text-sm text-gray-900 ">

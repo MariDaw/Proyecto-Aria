@@ -2,7 +2,9 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\Categoria;
 use App\Models\Producto;
+use App\Models\producto_categoria;
 use Livewire\Component;
 use Livewire\WithPagination;
 
@@ -38,17 +40,19 @@ class FiltradoProductos extends Component
             $producto = Producto::all();
         }
          else {
-            $productoLive = Producto::where('titulo', $this->productoSelect)->get()[0]->titulo;
+            $productoLive = Categoria::where('nombre', $this->productoSelect)->get()[0]->nombre;
 
             $producto = Producto:: where('titulo', $productoLive)->get();
 
 
         }
 
+        $categorias = Categoria::all();
         /* $producto = Producto::all(); */
         return view('livewire.filtrado-productos', [
             'productosAll' => $productos,
             'productos' => $producto,
+            'categorias' => $categorias,
             'producto' => $producto,
             'query' => $query,
 

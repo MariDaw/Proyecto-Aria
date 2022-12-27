@@ -7,6 +7,7 @@ use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\SaveController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
+use App\Http\Controllers\ComentarioController;
 use App\Http\Controllers\ValoracionController;
 use App\Http\Controllers\UserController;
 use App\Models\Publicacion;
@@ -24,7 +25,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('dashboard');
+    return view('welcome');
 });
 
 Route::get('/dashboard', function () {

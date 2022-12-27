@@ -101,10 +101,17 @@
                 <div
                     class="mt-6 grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
 
-                                                <div class="group relative">
+                    <div class="group relative">
+                                                    <h2 class="text-3xl text-gray-700">
+                                                        <a href="#">
+
+                                                            {{ $publicacion->famoso->nombre }}
+                                                        </a>
+                                                    </h2>
                                                     <div
                                                         class=" aspect-w-1 aspect-h-1 w-[500px] h-[600px] overflow-hidden rounded-md bg-gray-200  ">
                                                         <a href="{{route('show/publicacion', [$publicacion])}}">
+
 
                                                         <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
                                                             alt="Front of men&#039;s Basic Tee in black."
@@ -127,7 +134,9 @@
                                                                 <form action="{{ route('anadiralperfil', $publicacion) }}" method="POST">
                                                                     @csrf
                                                                     @method('POST')
-                                                                    <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Save</button>
+                                                                    <button type="submit" class="px-4 py-1 text-sm text-white mb-5 bg-red-400 rounded">Save</button>
+
+                                                                </form>
 
 
                                                                 <p class="text-red-400">
@@ -137,6 +146,7 @@
                                                                     {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}}
                                                                     likes
                                                                     @endif
+                                                                </p>
 
                                                                     @if (App\Http\Controllers\ValoracionController::isLiked($publicacion))
                                                                     <form action="{{ route('destroy', $publicacion) }}" method="POST">
@@ -153,20 +163,19 @@
                                                                       @else
 
                                                                       <form action="{{ route('store', $publicacion) }}" method="POST">
-                                                                          @csrf
-                                                              @method('POST')
+                                                                        @csrf
+                                                                        @method('POST')
+                                                                        <button type="submit">
+                                                                            <div id="container">
+                                                                              <div class="heart-like-button">
+                                                                              </div>
+                                                                            </div>
+                                                                          </button>
+                                                                          </form>
+                                                                          @endif
 
-                                                                          <button type="submit">
-                                                                    <div id="container">
-                                                                      <div class="heart-like-button">
-                                                                      </div>
-                                                                    </div>
-                                                                  </button>
-                                                                        </form>
-                                                                      @endif
-                                                                  </p>
 
-                                                              <form class="w-auto mt-10" action="{{ route('anadircomentario') }}"
+                                                              <form class="w-60 mt-10" action="{{ route('anadircomentario') }}"
                                                                   method="POST">
                                                                   @csrf
                                                                   @method('POST')
@@ -180,7 +189,7 @@
                                                                       hidden value="{{ $publicacion->id }}">
                                                                   <div class="-mr-1 w-20">
                                                                       <input type='submit'
-                                                                          class="bg-red-400 w-20 h-6 text-center justify-center items-center text-red-900 font-s  border border-red-500 rounded-lg tracking-wide mr-1 hover:bg-red-500"
+                                                                          class="bg-red-400 w-20 mb-2 h-6 text-center justify-center items-center text-red-900 font-s  border border-red-500 rounded-lg tracking-wide mr-1 hover:bg-red-500"
                                                                           value='Post'>
                                                                   </div>
 
