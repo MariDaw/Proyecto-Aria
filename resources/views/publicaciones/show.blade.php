@@ -97,19 +97,21 @@
                     <x-plantilla>
      <div class="bg-white">
 
-           <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
-                <div
-                    class="mt-6 grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+           <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 border border-blue-400">
 
-                    <div class="group relative">
-                                                    <h2 class="text-3xl text-gray-700">
+                <div
+                    class="mt-0 grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+
+                    <div class="group relative mt-0">
+
+                                                    <h2 class="text-3xl mt-0 text-gray-700">
                                                         <a href="#">
 
                                                             {{ $publicacion->famoso->nombre }}
                                                         </a>
                                                     </h2>
                                                     <div
-                                                        class=" aspect-w-1 aspect-h-1 w-[500px] h-[600px] overflow-hidden rounded-md bg-gray-200  ">
+                                                        class=" aspect-w-1 aspect-h-1 w-[400px] h-[500px] overflow-hidden rounded-md bg-gray-200  ">
                                                         <a href="{{route('show/publicacion', [$publicacion])}}">
 
 
@@ -233,6 +235,15 @@
                                     </x-plantilla>
                                 </div>
                                 </div>
+                                </div>
+                                <div class="flex grid-cols-2 w-full h-1/2">
+                                    <div class="border border-red-500 w-auto h-1/2"><h1>PRENDAS</h1>
+                                    <li>Camiseta</li>
+                                    <li>Pantalon</li>
+                                    <li>Zapatos</li>
+                                    <li>Chaqueta</li>
+                                </div>
+
                                 </div>
                                 </div>
 

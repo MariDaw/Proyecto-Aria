@@ -24,10 +24,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
-    return view('welcome');
+    return view('prueba');
 });
+
+// Route::get('/', function () {
+//     return view('aria.index');
+// })->name('index');
+
+// Route::get('/', function () {
+//     return view('aria.notuser');
+// });
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -60,6 +67,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/publicaciones/save/{publicacion}', [SaveController::class, 'anadiralperfil'])
         ->name('anadiralperfil');
+
+        Route::post('/publicaciones/unsave/{publicacion}', [SaveController::class, 'unsave'])
+        ->name('unsave');
 
     Route::post('/anadircomentario', [ComentarioController::class, 'anadircomentario'])
     ->name('anadircomentario');

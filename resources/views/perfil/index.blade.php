@@ -13,12 +13,12 @@
                 <div class="p-6 bg-white border-b border-gray-200">
                     <x-plantilla>
                         <div class="flex w-full ">
-                            <h1 class="items-start text-3xl text-gray-500">
-                                Perfil
+                            <h1 class="items-start text-3xl text-black">
+                                {{ $perfil->user_id }}
                             </h1>
 
 
-                            <h2 class=" justify-end ml-80 text-3xl text-black ">{{ $perfil->user_id }}</h2>
+                            <h2 class=" justify-end ml-80 text-3xl text-black "></h2>
 
                         </div>
                         <div class="flex w-full h-auto  mt-20">
@@ -52,11 +52,11 @@
                                                         <p class="mt-1 text-sm text-gray-500">
                                                             {{ $save->publicacion->descripcion }}</p>
 
-                                                        {{-- <form action="{{ route('anadiralperfil', $publicacion) }}" method="POST">
+                                                        {{-- <form action="{{ route('unsave', $publicacion) }}" method="POST">
                                                         @csrf
                                                         @method('POST')
-                                                        <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Save</button>
-                                                    </form> --}}
+                                                        <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Unsave</button> --}}
+                                                    </form>
 
                                                         <p class="text-red-400">
                                                             @if ($valoraciones->where('publicacion_id', $save->publicacion->id)->first() == null)

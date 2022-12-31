@@ -15,7 +15,7 @@
 
       {{-- {{ $query}} --}}
       <div>
-        <input wire:model.debounce.1000ms="famosoSelect" type="search" placeholder="Search" class="shadow appearance-none border rounded w-1/3 py-2 -m-3
+        <input wire:model.debounce.1000ms="searchTerm" type="search" placeholder="Search" class="shadow appearance-none border rounded w-1/3 py-2 -m-3
         text-gray-700 mt-10 leading-tight focus:outline-none focus:shadow-outline placeholder-blue-400" name="" id="">
     </div>
 
@@ -72,7 +72,7 @@
 
 
                                             @endforeach
-                                            {{-- {{ $publicaciones->links() }} --}}
+                                            {{ $publicaciones->links() }}
                                 </x-plantilla>
                             </div>
                             </div>

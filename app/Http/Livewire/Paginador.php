@@ -4,6 +4,7 @@ namespace App\Http\Livewire;
 
 use App\Models\Famoso;
 use App\Models\Publicacion;
+use App\Models\User;
 use App\Models\Valoracion;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -11,33 +12,18 @@ use Livewire\WithPagination;
 class Paginador extends Component
 {
 
-    public $q;
-    public $search = '';
 
     use WithPagination;
+
+    public $searchTerm;
+
+    public $famosoSelect = 'All';
 
     public $active;
 
 
     public function render()
     {
-        $publicaciones = Famoso::where('nombre', $this->q)
-                    ->when( $this->q, function($query) {
-                        return $query->where(function ($query) {
-                            $query->where('nombre', 'like', '%'.$this->q . '%');
-                        });
-
-                    })
-
-            ->when($this->active, function( $query){
-                return $query->active();
-            });
-            $query = $publicaciones->toSql();
-
-
-
-
-/*
         if ($this->famosoSelect == 'All')
         {
             $publicaciones = Publicacion::all();
@@ -48,17 +34,21 @@ class Paginador extends Component
             $publicaciones = Publicacion:: where('famoso_id', $famosoLive)->get() ;
 
 
-        } */
+        }
 
         $famosos = Famoso::all();
         $valoraciones = Valoracion::all();
         return view('livewire.filtrar', [
-            'publicaciones' => $publicaciones,
+            // 'publicaciones' =>	Publicacion::where(function($sub_query){
+            //     $sub_query->where('titulo', 'like', '%'.$this->searchTerm.'%')
+            //               ->orWhere('descripcion', 'like', '%'.$this->searchTerm.'%');
+            // })->paginate(3),
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,
-            'query' => $query,
+            'publicaciones' => $publicaciones,
+
+
         ]);
-        /* dd($this->famosoSelect); */
 
     }
 

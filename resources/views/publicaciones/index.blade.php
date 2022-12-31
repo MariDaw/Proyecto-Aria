@@ -6,5 +6,8 @@
     </x-slot>
 
                             <livewire:filtrar/>
+                            {{-- <livewire:paginador/> --}}
 
 </x-app-layout>
+
+@livewireScripts

@@ -32,7 +32,7 @@ class PerfilController extends Controller
             'famosos' => $famosos,
             'saves' => $saves->where('user_id', Auth::user()->id),
             'valoraciones' => $valoraciones,
-
+            'publicacion' => $publicacion,
         ]);
     }
 
