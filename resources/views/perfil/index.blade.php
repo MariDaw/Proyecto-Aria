@@ -26,7 +26,7 @@
 
                                 <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
 
-                                    <h2 class="text-2xl flex p-2 w-2/5 tracking-tight text-gray-600" style="font-family: 'Roboto Condensed', sans-serif; background-color: #7283E1;"><img class="mr-3" src="img/save.png" alt=""> PUBLICACIONES GUARDADAS
+                                    <h2 class="text-2xl flex p-2 w-2/5 tracking-tight text-gray-600" style="font-family: 'Roboto Condensed', sans-serif; background-color: white;"><img class="mr-3" src="img/save.png" alt=""> PUBLICACIONES GUARDADAS
                                     </h2>
 
                                     <div
@@ -80,4 +80,5 @@
     </div>
     </div>
     </div>
+    @include('components.footer')
 </x-app-layout>

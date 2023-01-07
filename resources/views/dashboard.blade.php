@@ -4,7 +4,7 @@
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
             {{ __('Home') }}
         </h2>
-       
+
     </x-slot>
 
     <div class="py-12 border-2 mt-0">
@@ -36,5 +36,5 @@
     </div>
 
 
-
+    @include('components.footer')
 </x-app-layout>

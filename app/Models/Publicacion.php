@@ -31,4 +31,9 @@ class Publicacion extends Model
     {
         return $this->hasMany(Save::class);
     }
+
+    public function links()
+    {
+        return $this->hasMany(Link::class);
+    }
 }

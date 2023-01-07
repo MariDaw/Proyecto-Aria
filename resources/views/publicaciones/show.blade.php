@@ -97,7 +97,7 @@
                     <x-plantilla>
      <div class="bg-white">
 
-           <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 border border-blue-400">
+           <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 ">
 
                 <div
                     class="mt-0 grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
@@ -237,11 +237,11 @@
                                 </div>
                                 </div>
                                 <div class="flex grid-cols-2 w-full h-1/2">
-                                    <div class="border border-red-500 w-auto h-1/2"><h1>PRENDAS</h1>
-                                    <li>Camiseta</li>
-                                    <li>Pantalon</li>
-                                    <li>Zapatos</li>
-                                    <li>Chaqueta</li>
+                                    <div class="mx-36 w-auto h-1/2"><h1 class="text-2xl">PRENDAS</h1>
+                                    @foreach ($publicacion->links as $link )
+
+                                    <a class="text-blue" href="{{$link->texto}}">{{$link->texto}}</>
+                                    @endforeach
                                 </div>
 
                                 </div>
@@ -262,5 +262,7 @@
                                   }
                                 });
                                 </script>
+
+@include('components.footer')
 
 </x-app-layout>

@@ -4,7 +4,6 @@ namespace App\Http\Livewire;
 
 use App\Models\Famoso;
 use App\Models\Publicacion;
-use App\Models\User;
 use App\Models\Valoracion;
 use Livewire\Component;
 use Livewire\WithPagination;
@@ -13,17 +12,33 @@ class Paginador extends Component
 {
 
 
+    public $famosoSelect = 'All';
+
+
     use WithPagination;
 
     public $searchTerm;
 
-    public $famosoSelect = 'All';
-
     public $active;
+    public $query;
+
 
 
     public function render()
     {
+
+        // $publicaciones = Famoso::where('nombre', $this->busqueda)
+        //     ->when($this->busqueda, function ($query) {
+        //         return $query->where(function ($query) {
+        //             $query->where('nombre', 'ilike', "%$this->busqueda%");
+        //         }
+        //         );
+
+        //     });
+
+
+
+
         if ($this->famosoSelect == 'All')
         {
             $publicaciones = Publicacion::all();
@@ -38,17 +53,19 @@ class Paginador extends Component
 
         $famosos = Famoso::all();
         $valoraciones = Valoracion::all();
-        return view('livewire.filtrar', [
+        return view('livewire.paginador', [
             // 'publicaciones' =>	Publicacion::where(function($sub_query){
             //     $sub_query->where('titulo', 'like', '%'.$this->searchTerm.'%')
             //               ->orWhere('descripcion', 'like', '%'.$this->searchTerm.'%');
             // })->paginate(3),
+            'publicaciones' => $publicaciones,
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,
-            'publicaciones' => $publicaciones,
+
 
 
         ]);
+
 
     }
 
@@ -59,35 +76,9 @@ class Paginador extends Component
         $this->resetPage();
     }
 
-    public function updatingQ()
+    public function updatingFamosoSelect()
     {
         $this->resetPage();
     }
-
-    public function updatingSearch()
-    {
-        $this->resetPage();
-    }
-
-
-    /* public function render()
-    {
-
-
-        $famosos = Famoso::all();
-        $publicaciones = Publicacion::where('title', 'like', '%'.$this->search.'%')->paginate(10);
-
-
-        return view('livewire.paginador', [
-            'publicaciones' => $publicaciones,
-            'publicaciones' => Publicacion::where('title', 'like', '%'.$this->search.'%')->paginate(10),
-            'famosos' => $famosos,
-
-
-        ]);
-
-
-    } */
-
 
 }

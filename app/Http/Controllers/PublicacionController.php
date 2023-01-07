@@ -6,6 +6,7 @@ use App\Http\Requests\StorePublicacionRequest;
 use App\Http\Requests\UpdatePublicacionRequest;
 use App\Models\Famoso;
 use App\Models\Comentario;
+use App\Models\Link;
 use App\Models\Publicacion;
 use App\Models\Valoracion;
 
@@ -60,9 +61,11 @@ class PublicacionController extends Controller
     public function show(Publicacion $publicacion)
     {
         $valoraciones = Valoracion::all();
+        $links = Link::all();
         return view('publicaciones.show', [
             'publicacion' => $publicacion,
             'valoraciones' => $valoraciones,
+            'links' => $links,
         ]);
     }
 
@@ -100,25 +103,25 @@ class PublicacionController extends Controller
         //
     }
 
-    public function like(): void
-    {
-        if ($this->post->isLiked()) {
-            $this->post->removeLike();
+    // public function like(): void
+    // {
+    //     if ($this->post->isLiked()) {
+    //         $this->post->removeLike();
 
-            $this->count--;
-        } elseif (auth()->user()) {
-            $this->post->likes()->create([
-                'user_id' => auth()->id(),
-            ]);
+    //         $this->count--;
+    //     } elseif (auth()->user()) {
+    //         $this->post->likes()->create([
+    //             'user_id' => auth()->id(),
+    //         ]);
 
-            $this->count++;
-        } elseif (($ip = request()->ip()) && ($userAgent = request()->userAgent())) {
-            $this->post->likes()->create([
-                'ip' => $ip,
-                'user_agent' => $userAgent,
-            ]);
+    //         $this->count++;
+    //     } elseif (($ip = request()->ip()) && ($userAgent = request()->userAgent())) {
+    //         $this->post->likes()->create([
+    //             'ip' => $ip,
+    //             'user_agent' => $userAgent,
+    //         ]);
 
-            $this->count++;
-        }
-    }
+    //         $this->count++;
+    //     }
+    // }
 }

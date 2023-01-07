@@ -36,7 +36,7 @@
             </x-nav-link>
 
             </div>
-            
+
             <div class="bg-green-300 w-52 py-2 px-3" style="background-color: #7283E1; display:flex; justify-content:center; align-items:center;">
             <x-nav-link :href="route('perfil.index')" :active="request()->routeIs('perfil.index')">
                 <img class="flex ml-12 hover:scale-110" src="{{url('../img/user.png') }}" alt="Perfil">
@@ -160,3 +160,4 @@
         </div>
     </div>
 </nav>
+

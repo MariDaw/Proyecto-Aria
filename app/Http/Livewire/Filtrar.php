@@ -58,6 +58,7 @@ class Filtrar extends Component
                 $sub_query->where('titulo', 'like', '%'.$this->searchTerm.'%')
                           ->orWhere('descripcion', 'like', '%'.$this->searchTerm.'%');
             })->paginate(3),
+            
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,
 

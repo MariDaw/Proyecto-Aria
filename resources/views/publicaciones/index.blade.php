@@ -8,6 +8,7 @@
                             <livewire:filtrar/>
                             {{-- <livewire:paginador/> --}}
 
-</x-app-layout>
 
+</x-app-layout>
+@include('components.footer')
 @livewireScripts

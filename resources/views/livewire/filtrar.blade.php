@@ -68,9 +68,6 @@
                                                 </div>
                                             </div>
 
-
-
-
                                             @endforeach
                                             {{ $publicaciones->links() }}
                                 </x-plantilla>
