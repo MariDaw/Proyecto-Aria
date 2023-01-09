@@ -168,16 +168,18 @@ class CarritoController extends Controller
      */
     public function stripePost(Request $request)
     {
+
+
         Stripe\Stripe::setApiKey(env('STRIPE_SECRET'));
         Stripe\Charge::create ([
                 "amount" => 100 * 100,
-                "currency" => "usd",
+                "currency" => "eur",
                 "source" => $request->stripeToken,
                 "description" => "Test payment from itsolutionstuff.com."
         ]);
 
-        Session::flash('success', 'Payment successful!');
+        return redirect()->route('carritos.index')->with('success', 'Pago realizado con exito.');
 
-        return back();
+        // return back();
     }
 }
