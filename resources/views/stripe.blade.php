@@ -101,7 +101,6 @@
                         @foreach ($carritos as $carrito )
                         @php
                             $precio = 0;
-
                             $precio += $carrito->producto->precio * $carrito->cantidad;
                         @endphp
                         @endforeach

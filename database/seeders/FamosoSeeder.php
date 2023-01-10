@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class FamosoSeeder extends Seeder
 {
@@ -14,6 +15,19 @@ class FamosoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('famosos')->insert([
+            ['nombre'=> 'Kendall',
+            ],
+
+            ['nombre'=> 'Bella',
+            ],
+
+            ['nombre'=> 'Gigi',
+            ],
+
+            ['nombre'=> 'Rosalía',
+            ],
+
+        ]);
     }
 }

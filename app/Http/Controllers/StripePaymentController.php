@@ -25,6 +25,7 @@ class StripePaymentController extends Controller
         ]);
     }
 
+    
     /**
      * success response method.
      *
