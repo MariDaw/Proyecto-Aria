@@ -90,28 +90,28 @@
         }
                 </style>
 
-    <div class="py-12">
+    <div class="py-12 ">
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 flex bg-white border-b border-gray-200">
                     <x-plantilla>
      <div class="bg-white">
 
-           <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8 ">
+           <div class="mx-10 mt-0 pt-0  max-w-2xl px-4 sm:py-5 sm:px-6 lg:max-w-7xl lg:px-8  grid grid-cols-2 gap-2">
 
                 <div
-                    class="mt-0 grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                    class="mt-0 grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
 
-                    <div class="group relative mt-0">
+                    <div class=" mt-0">
 
-                                                    <h2 class="text-3xl mt-0 text-gray-700">
+                                                    <h2 class="text-3xl mt-0 mb-3 text-gray-700">
                                                         <a href="#">
 
                                                             {{ $publicacion->famoso->nombre }}
                                                         </a>
                                                     </h2>
                                                     <div
-                                                        class=" aspect-w-1 aspect-h-1 w-[400px] h-[500px] overflow-hidden rounded-md bg-gray-200  ">
+                                                        class="aspect-w-1 aspect-h-1 w-[400px] h-[500px] overflow-hidden rounded-md bg-gray-200  ">
                                                         <a href="{{route('show/publicacion', [$publicacion])}}">
 
 
@@ -122,7 +122,7 @@
 
                                                         </div>
 
-                                                    <div class="mt-4 flex justify-between">
+                                                    <div class="w-full mt-4 flex justify-between">
                                                         <div>
                                                             <h3 class="text-sm text-gray-700">
                                                                 <a href="#">
@@ -130,17 +130,43 @@
                                                                     {{ $publicacion->famoso->nombre }}
                                                                 </a>
                                                             </h3>
-                                                            <p class="mt-1 text-sm text-gray-500">
+                                                            <p class=" w-72 mt-1 text-sm text-gray-500">
                                                                 {{ $publicacion->descripcion }}</p>
 
                                                                 <form action="{{ route('anadiralperfil', $publicacion) }}" method="POST">
                                                                     @csrf
                                                                     @method('POST')
-                                                                    <button type="submit" class="px-4 py-1 text-sm text-white mb-5 bg-red-400 rounded">Save</button>
+                                                                    <button type="submit" class="px-4 py-1 text-sm mt-5 text-white mb-5 bg-red-400  rounded">Save</button>
 
                                                                 </form>
 
 
+
+                                                                @if (App\Http\Controllers\ValoracionController::isLiked($publicacion))
+                                                                <form action="{{ route('destroy', $publicacion) }}" method="POST">
+                                                                    @csrf
+                                                                    @method('POST')
+
+                                                                    <button type="submit">
+                                                                        <div id="container">
+                                                                            <div class="heart-like-button">
+                                                                            </div>
+                                                                        </div>
+                                                                    </button>
+                                                                </form>
+                                                                @else
+
+                                                                <form action="{{ route('store', $publicacion) }}" method="POST">
+                                                                    @csrf
+                                                                    @method('POST')
+                                                                    <button type="submit" >
+                                                                        <div id="container" >
+                                                                            <div class="heart-like-button mx-56">
+                                                                            </div>
+                                                                        </div>
+                                                                    </button>
+                                                                </form>
+                                                                @endif
                                                                 <p class="text-red-400">
                                                                     @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null)
                                                                     0 likes
@@ -150,99 +176,81 @@
                                                                     @endif
                                                                 </p>
 
-                                                                    @if (App\Http\Controllers\ValoracionController::isLiked($publicacion))
-                                                                    <form action="{{ route('destroy', $publicacion) }}" method="POST">
-                                                                      @csrf
-                                                                      @method('POST')
 
-                                                                      <button type="submit">
-                                                                    <div id="container">
-                                                                      <div class="heart-like-button">
-                                                                      </div>
+                                                                        </div>
+
                                                                     </div>
-                                                                  </button>
-                                                                  </form>
-                                                                      @else
-
-                                                                      <form action="{{ route('store', $publicacion) }}" method="POST">
-                                                                        @csrf
-                                                                        @method('POST')
-                                                                        <button type="submit">
-                                                                            <div id="container">
-                                                                              <div class="heart-like-button">
-                                                                              </div>
-                                                                            </div>
-                                                                          </button>
-                                                                          </form>
-                                                                          @endif
-
-
-                                                              <form class="w-60 mt-10" action="{{ route('anadircomentario') }}"
-                                                                  method="POST">
-                                                                  @csrf
-                                                                  @method('POST')
-                                                                  <div class="w-auto md:w-full px-3 mb-2 mt-2">
-                                                                      <input  id="comentario" name="comentario"
-                                                                          maxlength="100"
-                                                                          class="bg-white border-b-2 border-gray-500 leading-normal resize-none w-full h-10 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
-                                                                          placeholder='Comment...' required>
-                                                                  </div>
-                                                                  <input type="text" id="publicacion" name="publicacion"
-                                                                      hidden value="{{ $publicacion->id }}">
-                                                                  <div class="-mr-1 w-20">
-                                                                      <input type='submit'
-                                                                          class="bg-red-400 w-20 mb-2 h-6 text-center justify-center items-center text-red-900 font-s  border border-red-500 rounded-lg tracking-wide mr-1 hover:bg-red-500"
-                                                                          value='Post'>
-                                                                  </div>
-
-                                                              </form>
-
-                                                              <div>
-                                                                  @foreach ($publicacion->comentarios as $comentario)
-                                                                      @php
-                                                                          $fecha = explode(' ', $comentario->created_at);
-                                                                      @endphp
-                                                                      @if ($comentario->comentario_id != null)
-                                                                      @else
-                                                                          <div class="space-y-2 w-full">
-
-                                                                              <div class="flex">
-                                                                                  <div class="flex-shrink-0 mr-3">
-
-                                                                                  </div>
-
-                                                                                  <div
-                                                                                      class="flex-1 border rounded-lg px-2 py-2 sm:px-4 sm:py-4 leading-relaxed ">
-
-                                                                                      <strong>{{ $comentario->user->name }}</strong>
-                                                                                      <span
-                                                                                          class="text-xs text-gray-400">{{ $fecha[0] }}</span>
-                                                                                      <div class="flex">
-                                                                                          <p class="text-sm w-3/4 inline-block">
-                                                                                              {{ $comentario->texto }}
-                                                                                          </p>
-                                                                                      </div>
-
-                                                                                  </div>
-                                                                              </div>
-                                                                          </div>
-                                                                      @endif
-                                                                  @endforeach
+                                                                </div>
                                                             </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                    </x-plantilla>
-                                </div>
-                                </div>
-                                </div>
-                                <div class="flex grid-cols-2 w-full h-1/2">
-                                    <div class="mx-36 w-auto h-1/2"><h1 class="text-2xl">PRENDAS</h1>
-                                    @foreach ($publicacion->links as $link )
+                                                            <div class="flex grid-cols-2 ml-10 mt-12 w-2/3 h-1/2 rounded-xl border bg-gray-400 border-green-400">
+                                                                <div class="mx-10 mt-10 w-auto h-1/2 "><h1 class="text-3xl text-bold mb-5 text-black">PRENDAS</h1>
+                                                                @foreach ($publicacion->links as $link )
 
-                                    <a class="text-blue" href="{{$link->texto}}">{{$link->texto}}</>
-                                    @endforeach
+                                                                <li class="m-0"><a class="text-blue m-0 border border-blue-500 h-1/3" href="{{$link->texto}}">{{$link->texto}}</a></li>
+                                                                @endforeach
+                                                            </div>
+                                                            </div>
+                                                        </x-plantilla>
+
+                                                        <div class=" grid grid-cols-1 mx-32 align-middle justify-center ">
+                                                        <form class="w-full " action="{{ route('anadircomentario') }}"
+                                                            method="POST">
+                                                            @csrf
+                                                            @method('POST')
+                                                            <div class="w-full md:w-full px-3 mb-2  mt-2  ">
+                                                                <input  id="comentario" name="comentario"
+                                                                    maxlength="100"
+                                                                    class="bg-white border rounded-xl border-gray-500 leading-normal resize-none w-full h-10 py-2 px-3 font-medium placeholder-gray-700 focus:outline-none focus:bg-white"
+                                                                    placeholder='Comment...' required>
+                                                            </div>
+                                                            <input type="text" id="publicacion" name="publicacion"
+                                                                hidden value="{{ $publicacion->id }}">
+                                                            <div class="w-full justify-end text-right pr-10">
+                                                                <input type='submit'
+                                                                    class="bg-red-400 w-20 mb-2 h-6 text-center justify-center items-center text-red-900 font-s  border border-red-500 rounded-lg tracking-wide mr-1 hover:bg-red-500"
+                                                                    value='Post'>
+                                                            </div>
+                                                            <div class="w-full border border-b-2 mb-4"></div>
+
+                                                        </form>
+
+                                                        <div class=" w-full mt-1">
+                                                            @foreach ($publicacion->comentarios as $comentario)
+                                                                @php
+                                                                    $fecha = explode(' ', $comentario->created_at);
+                                                                @endphp
+                                                                @if ($comentario->comentario_id != null)
+                                                                @else
+                                                                    <div class="space-y-2 mt-1 w-full">
+
+                                                                        <div class="flex">
+                                                                            <div class="flex-shrink-0 mr-3">
+
+                                                                            </div>
+
+                                                                            <div
+                                                                                class="flex-1 border rounded-lg px-2 py-2 sm:px-4 sm:py-4 leading-relaxed ">
+
+                                                                                <strong>{{ $comentario->user->name }}</strong>
+                                                                                <span
+                                                                                    class="text-xs text-gray-400">{{ $fecha[0] }}</span>
+                                                                                <div class="flex">
+                                                                                    <p class="text-sm w-full inline-block">
+                                                                                        {{ $comentario->texto }}
+                                                                                    </p>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                @endif
+                                                            @endforeach
+                                                        </div>
+
                                 </div>
+                                </div>
+                                </div>
+
 
                                 </div>
                                 </div>
@@ -263,6 +271,6 @@
                                 });
                                 </script>
 
-@include('components.footer')
 
 </x-app-layout>
+@include('components.footer')
