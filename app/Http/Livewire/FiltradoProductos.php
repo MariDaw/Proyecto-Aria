@@ -13,28 +13,29 @@ class FiltradoProductos extends Component
 
     use WithPagination;
 
-    public $active;
-    public $q;
+    // public $active;
+    // public $q;
 
 
     public function render()
     {
 
-        $productos = Producto::where('titulo', $this->productoSelect)
-                    ->when( $this->productoSelect, function($query) {
-                        return $query->where(function ($query) {
-                            $query->where('titulo', 'like', '%'.$this->productoSelect . '%');
-                        });
+        // $productos = Producto::where('titulo', $this->productoSelect)
+        //             ->when( $this->productoSelect, function($query) {
+        //                 return $query->where(function ($query) {
+        //                     $query->where('titulo', 'like', '%'.$this->productoSelect . '%');
+        //                 })->paginate(4);
 
-                    })
+        //             })
 
-            ->when($this->active, function( $query){
-                return $query->active();
-            });
-            $query = $productos->toSql();
-            $productos = $productos->paginate(10);
+        //     ->when($this->active, function( $query){
+        //         return $query->active();
+        //     });
+            // $query = $productos->toSql();
+
 
         $productos = Producto::all();
+
         if ($this->productoSelect == 'All')
         {
             $producto = Producto::all();
@@ -43,19 +44,14 @@ class FiltradoProductos extends Component
             $productoLive = Categoria::where('nombre', $this->productoSelect)->get()[0]->nombre;
 
             $producto = Producto:: where('titulo', $productoLive)->get();
-
-
         }
 
         $categorias = Categoria::all();
-        /* $producto = Producto::all(); */
+
         return view('livewire.filtrado-productos', [
             'productosAll' => $productos,
             'productos' => $producto,
             'categorias' => $categorias,
-            'producto' => $producto,
-            'query' => $query,
-
         ]);
         /* dd($this->famosoSelect); */
 

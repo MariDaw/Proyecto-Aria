@@ -8,6 +8,7 @@ use App\Http\Controllers\SaveController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\SaveProController;
 use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\ValoracionController;
 use App\Http\Controllers\UserController;
@@ -49,7 +50,7 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/show/publicacion/{publicacion}', [PublicacionController::class, 'show'])->name('show/publicacion');
 
-    Route::get('/show/{producto}', [ProductoController::class, 'show'])->name('show');
+    Route::get('/show/producto{producto}', [ProductoController::class, 'show'])->name('show/producto');
 
     Route::resource('carritos', CarritoController::class);
 
@@ -67,6 +68,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/publicaciones/save/{publicacion}', [SaveController::class, 'anadiralperfil'])
         ->name('anadiralperfil');
+
+    Route::post('/productos/save/{producto}', [SaveProController::class, 'productoperfil'])
+        ->name('productoperfil');
 
         Route::post('/publicaciones/unsave/{publicacion}', [SaveController::class, 'unsave'])
         ->name('unsave');

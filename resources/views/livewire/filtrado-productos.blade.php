@@ -16,15 +16,15 @@
                             <div class="mx-auto mt-0 max-w-1xl py-3 sm:py-5 sm:px-0 lg:max-w-7xl lg:px-8">
                                 <h2 class="sr-only">Products</h2>
                                 {{-- {{ $query }} --}}
-                                <div>
+                                {{-- <div>
                                     <input wire:model.debounce.500ms="productoSelect" type="search" placeholder="Buscar" class="shadow appearance-none border rounded w-full py-2 -m-3
                                     text-gray-700 leading-tight focus:outline-none focus:shadow-outline placeholder-blue-400" name="" id="">
-                                </div>
+                                </div> --}}
 
                                 <div
                                 class="grid grid-cols-1 mt-10 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
                                 @foreach ($productos as $producto)
-                                    <a href="{{ route('show', [$producto]) }}">
+                                    <a href="{{ route('show/producto', [$producto]) }}">
                                         <div class="group">
                                                 <div
                                                     class="aspect-w-1 aspect-h-1 w-full overflow-hidden rounded-lg bg-gray-200 xl:aspect-w-7 xl:aspect-h-8">
@@ -48,15 +48,18 @@
 
                                                 </div>
                                         </div>
-                                    @endforeach
+                                    </a>
+                                        @endforeach
+                                    </div>
                                 </div>
+                                {{-- {{ $productos->links() }} --}}
                             </div>
-                        </div>
                     </x-plantilla>
                 </div>
             </div>
         </div>
     </div>
-
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
     @livewireScripts

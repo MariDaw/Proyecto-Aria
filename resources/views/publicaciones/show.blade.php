@@ -186,7 +186,7 @@
                                                                 <div class="mx-10 mt-10 w-auto h-1/2 "><h1 class="text-3xl text-bold mb-5 text-black">PRENDAS</h1>
                                                                 @foreach ($publicacion->links as $link )
 
-                                                                <li class="m-0"><a class="text-blue m-0 border border-blue-500 h-1/3" href="{{$link->texto}}">{{$link->texto}}</a></li>
+                                                                <li class="m-0"> <span class="text-bold text-black">{{$link->prenda}}</span></br><a class="text-blue-200 m-0 h-1/3" href="{{$link->url}}">{{$link->url}}</a></li>
                                                                 @endforeach
                                                             </div>
                                                             </div>

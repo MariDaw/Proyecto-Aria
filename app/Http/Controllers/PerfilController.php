@@ -6,8 +6,10 @@ use App\Http\Requests\StorePerfilRequest;
 use App\Http\Requests\UpdatePerfilRequest;
 use App\Models\Famoso;
 use App\Models\Perfil;
+use App\Models\Producto;
 use App\Models\Publicacion;
 use App\Models\Save;
+use App\Models\SavePro;
 use App\Models\Valoracion;
 use Illuminate\Support\Facades\Auth;
 
@@ -25,14 +27,18 @@ class PerfilController extends Controller
         $famosos = Famoso::all();
         $publicacion = Publicacion::all();
         $saves = Save::all();
+        $save_pros = SavePro::all();
+        $productos = Producto::all();
         $valoraciones = Valoracion::all();
 
         return view('perfil.index', [
             'perfil' => $perfil,
             'famosos' => $famosos,
             'saves' => $saves->where('user_id', Auth::user()->id),
+            'savePros' => $save_pros->where('user_id', Auth::user()->id),
             'valoraciones' => $valoraciones,
             'publicacion' => $publicacion,
+            'productos' => $productos,
         ]);
     }
 

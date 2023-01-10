@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Save extends Model
+class SavePro extends Model
 {
     use HasFactory;
 
@@ -14,9 +14,7 @@ class Save extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function publicacion(){
-        return $this->belongsTo(Publicacion::class);
+    public function producto(){
+        return $this->belongsTo(Producto::class);
     }
-
-    
 }

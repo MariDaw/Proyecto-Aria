@@ -7,6 +7,8 @@ use App\Http\Requests\UpdateProductoRequest;
 use App\Models\Categoria;
 use App\Models\Producto;
 use App\Models\producto_categoria;
+use App\Models\Save;
+use Illuminate\Support\Facades\Auth;
 
 class ProductoController extends Controller
 {
@@ -95,4 +97,6 @@ class ProductoController extends Controller
     {
         //
     }
+
+    
 }

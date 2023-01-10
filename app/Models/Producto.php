@@ -18,4 +18,9 @@ class Producto extends Model
     {
         return $this->belongsTo(Categoria::class);
     }
+
+    public function saves_pros()
+    {
+        return $this->hasMany(SavePro::class);
+    }
 }

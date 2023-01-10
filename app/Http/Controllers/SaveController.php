@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreSaveRequest;
 use App\Http\Requests\UpdateSaveRequest;
 use App\Models\Famoso;
+use App\Models\Producto;
 use App\Models\Publicacion;
 use App\Models\Save;
 use App\Models\Valoracion;
@@ -115,6 +116,7 @@ class SaveController extends Controller
 
         return redirect()->back()->with('success', 'Publicación añadida al perfil.');
     }
+
 
     // public function unsave(Publicacion $publicacion)
     // {

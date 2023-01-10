@@ -13,11 +13,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('links', function (Blueprint $table) {
+        Schema::create('save_pros', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('publicacion_id')->constrained('publicacions');
-            $table->string('prenda');
-            $table->string('url');
+            $table->foreignId('user_id')->constrained('users');
+            $table->foreignId('producto_id')->constrained('productos');
+            $table->string('texto')->nullable();
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('links');
+        Schema::dropIfExists('save_pros');
     }
 };

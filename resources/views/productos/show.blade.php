@@ -12,34 +12,56 @@
                     <x-plantilla>
                         <div class="bg-white">
 
-                            <div class="mx-auto  max-w-2xl py-16 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
+                            <div class="mx-auto  max-w-2xl py-5 px-4 sm:py-10 sm:px-6 lg:max-w-7xl lg:px-8">
                                 <div
-                                    class="mt-6 grid grid-cols-3 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+                                    class="mt-0 mx-10 grid grid-cols-2  ">
 
-                                    <div class="group relative">
+                                    <div class="group relative ">
+                                        {{-- <h2 class="text-3xl mt-0 mb-3 text-gray-700">
+                                                       <a href="#">
+
+                                                           {{ $producto->titulo }}
+                                                       </a>
+                                                   </h2> --}}
+
                                         <div
                                             class=" aspect-w-1 aspect-h-1 w-[500px] h-[600px] overflow-hidden rounded-md bg-gray-200  ">
-                                            <a href="{{ route('show', [$producto]) }}">
+                                            <a href="{{ route('show/producto', [$producto]) }}">
 
                                                 <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
                                                     alt="Front of men&#039;s Basic Tee in black."
-                                                    class="h-96 w-96 object-cover object-center lg:h-full lg:w-full">
+                                                    class="h-96 w-96 p-12  bg-white object-center lg:h-full lg:w-full">
                                             </a>
+                                        </div>
+                                        </div>
+                                        <div class=" my-28 py-10 text-left pl-10 " style="font-family: 'Roboto Condensed', sans-serif">
+                                        <h3 class="mb-0 text-4xl text-black text-bold ">{{ $producto->titulo }}</h3>
+                                        <div class="border mb-5 mr-32 border-b-2"></div>
+                                        <a href="{{ route('productos.index') }}" class=" text-xs text-lime-600 border-b-black-2">Comprar todo Aria</a>
+                                        <p class=" w-520 mt-1  text-base text-gray-500">
+                                            {{ $producto->descripcion }}</p>
+                                        <p class="mt-1 text-lg font-medium text-red-800">{{ $producto->precio }}&euro;
+                                        </p>
+                                        <div class="text-sm mt-5 text-gray-900 ">
+                                            <form action="{{ route('productoperfil', $producto) }}" method="POST">
+                                                @csrf
+                                                @method('POST')
+                                                <button type="submit" class="px-4 py-1 text-sm mt-5 text-white mb-5 bg-red-400  rounded">Save</button>
+
+                                            </form>
 
                                         </div>
-                                        <h3 class="mt-4 text-sm text-gray-700">{{ $producto->titulo }}</h3>
-                                        <p class="mt-1 text-lg font-medium text-gray-900">{{ $producto->precio }}&euro;
-                                        </p>
-                                        <div class="text-sm text-gray-900 ">
+                                        <div class="text-sm mt-5 text-gray-900 ">
                                             <form action="{{ route('anadiralcarrito', $producto) }}" method="POST">
                                                 @csrf
                                                 @method('POST')
                                                 <button type="submit"
-                                                    class="px-4 py-1 text-sm text-white bg-red-400 rounded">Añadir al
+                                                    class="px-10 py-2 text-lg text-white bg-black">Añadir al
                                                     carrito</button>
                                             </form>
 
                                         </div>
+                                    </div>
 
                                         </a>
 

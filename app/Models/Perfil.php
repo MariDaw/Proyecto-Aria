@@ -21,4 +21,12 @@ class Perfil extends Model
     public function saves(){
         return $this->hasMany(Save::class);
     }
+
+    public function saves_pro(){
+        return $this->hasMany(SavePro::class);
+    }
+
+    public function productos(){
+        return $this->hasMany(Producto::class);
+    }
 }
