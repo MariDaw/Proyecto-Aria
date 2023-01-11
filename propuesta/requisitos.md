@@ -9,383 +9,384 @@
 | **Entrega**     | v1             |
 | **Incidencia**  | [1](https://github.com/MariDaw/Proyecto-Aria/issues/1) |
 
-| **R2**     | **CÃ³digo fuente**         |
+| **R2**     | **Código fuente**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | CÃ³digo fuente publicado en GitHub.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Código fuente publicado en GitHub.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [2](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/2) |
+| **Incidencia**  | [2](https://github.com/MariDaw/Proyecto-Aria/issues/2) |
 
-| **R3**     | **Estilo del cÃ³digo**         |
+| **R3**     | **Estilo del código**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Estilo del cÃ³digo segÃºn las normas internas de Laravel Framework para el cÃ³digo y para las plantillas de las vistas.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Estilo del código según las normas internas de Laravel Framework para el código y para las plantillas de las vistas.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [3](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/3) |
+| **Incidencia**  | [3](https://github.com/MariDaw/Proyecto-Aria/issues/3) |
 
 | **R4**     | **Tres lanzamientos**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Tres lanzamientos (releases) etiquetados en el repositorio como v1, v2 y v3.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Tres lanzamientos (releases) etiquetados en el repositorio como v1, v2 y v3.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [4](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/4) |
+| **Incidencia**  | [4](https://github.com/MariDaw/Proyecto-Aria/issues/4) |
 
 | **R5**     | **README.md**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | README.md en el directorio raÃ­z con la descripciÃ³n principal del proyecto.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | README.md en el directorio raíz con la descripción principal del proyecto.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [5](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/5) |
+| **Incidencia**  | [5](https://github.com/MariDaw/Proyecto-Aria/issues/5) |
 
-| **R6**     | **DocumentaciÃ³n**         |
+| **R6**     | **Documentación**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | DocumentaciÃ³n publicada en GitHub Pages:  - Contenido:   - GuÃ­a general.   - API (opcional).             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Documentación publicada en GitHub Pages:  - Contenido:   - Guía general.   - API (opcional).             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [6](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/6) |
+| **Incidencia**  | [6](https://github.com/MariDaw/Proyecto-Aria/issues/6) |
 
 | **R7**     | **Incidencias en GitHub**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | AdministraciÃ³n y resoluciÃ³n de todas las incidencias notificadas en GitHub.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Administración y resolución de todas las incidencias notificadas en GitHub.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [7](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/7) |
+| **Incidencia**  | [7](https://github.com/MariDaw/Proyecto-Aria/issues/7) |
 
 | **R8**     | **Etiquetas e hitos**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Usar etiquetas e hitos:  - Etiquetas: mÃ­nimo, importante, opcional (ademÃ¡s de las ya existentes). - Hitos: v1, v2, v3 (con fechas de entrega aproximadas).             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Usar etiquetas e hitos:  - Etiquetas: mínimo, importante, opcional (además de las ya existentes). - Hitos: v1, v2, v3 (con fechas de entrega aproximadas).             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [8](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/8) |
+| **Incidencia**  | [8](https://github.com/MariDaw/Proyecto-Aria/issues/8) |
 
 | **R9**     | **Rama master**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | La rama master debe reflejar en todo momento el estado mÃ¡s estable de la aplicaciÃ³n, de manera que:  - La rama master no debe contener bugs conocidos. - El desarrollo deberÃ¡ hacerse en otras ramas creadas a tal efecto (una distinta por cada funcionalidad) y se irÃ¡n combinado con la master una vez que se haya implementado la funcionalidad correspondiente. - La release actual en el servicio de cloud computing corresponderÃ¡ siempre con el Ãºltimo commit de la rama master.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | La rama master debe reflejar en todo momento el estado más estable de la aplicación, de manera que:  - La rama master no debe contener bugs conocidos. - El desarrollo deberá hacerse en otras ramas creadas a tal efecto (una distinta por cada funcionalidad) y se irán combinado con la master una vez que se haya implementado la funcionalidad correspondiente. - La release actual en el servicio de cloud computing corresponderá siempre con el último commit de la rama master.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [9](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/9) |
+| **Incidencia**  | [9](https://github.com/MariDaw/Proyecto-Aria/issues/9) |
 
-| **R10**     | **GestiÃ³n del proyecto**         |
+| **R10**     | **Gestión del proyecto**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Usar GitHub Projects o similar para la gestiÃ³n general del proyecto.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Usar GitHub Projects o similar para la gestión general del proyecto.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [10](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/10) |
+| **Incidencia**  | [10](https://github.com/MariDaw/Proyecto-Aria/issues/10) |
 
-| **R11**     | **Final de cada iteraciÃ³n**         |
+| **R11**     | **Final de cada iteración**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Al final de cada iteraciÃ³n:  - Se realiza el lanzamiento que toque (v1, v2 o v3), etiquetando el commit correspondiente con el hito adecuado. - Se actualiza y publica la documentaciÃ³n. - Al final del Proyecto, se tiene que cumplir lo siguiente:   - Todas las incidencias cerradas con su debida justificaciÃ³n.   - En el backlog sÃ³lo pueden quedar tarjetas con prioridad opcional.   - El lanzamiento v3 desplegado en la nube.   - La documentaciÃ³n correctamente actualizada y publicada.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Al final de cada iteración:  - Se realiza el lanzamiento que toque (v1, v2 o v3), etiquetando el commit correspondiente con el hito adecuado. - Se actualiza y publica la documentación. - Al final del Proyecto, se tiene que cumplir lo siguiente:   - Todas las incidencias cerradas con su debida justificación.   - En el backlog sólo pueden quedar tarjetas con prioridad opcional.   - El lanzamiento v3 desplegado en la nube.   - La documentación correctamente actualizada y publicada.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [11](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/11) |
+| **Incidencia**  | [11](https://github.com/MariDaw/Proyecto-Aria/issues/11) |
 
-| **R12**     | **ValidaciÃ³n de formularios**         |
+| **R12**     | **Validación de formularios**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | ValidaciÃ³n de  los campos de los formularios.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Validación de  los campos de los formularios.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [12](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/12) |
+| **Incidencia**  | [12](https://github.com/MariDaw/Proyecto-Aria/issues/12) |
 
-| **R13**     | **GestiÃ³n de ventanas**         |
+| **R13**     | **Gestión de ventanas**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | GestiÃ³n de ventanas. GestiÃ³n de la apariencia de las ventanas. CreaciÃ³n de nuevas ventanas y comunicaciÃ³n entre ventanas. (Opcional)             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Gestión de ventanas. Gestión de la apariencia de las ventanas. Creación de nuevas ventanas y comunicación entre ventanas. (Opcional)             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [13](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/13) |
+| **Incidencia**  | [13](https://github.com/MariDaw/Proyecto-Aria/issues/13) |
 
 | **R14**     | **Manejo de eventos**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Interactividad  a travÃ©s de mecanismos de manejo de eventos intuitivos y eficaces.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Interactividad  a través de mecanismos de manejo de eventos intuitivos y eficaces.             |
+| **Prioridad**   | Ménimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [14](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/14) |
+| **Incidencia**  | [14](https://github.com/MariDaw/Proyecto-Aria/issues/14) |
 
 | **R15**     | **DOM**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Uso y manipulaciÃ³n de las caracterÃ­sticas del modelo de objetos del documento (DOM).             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Uso y manipulación de las caracterÃ­sticas del modelo de objetos del documento (DOM).             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [15](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/15) |
+| **Incidencia**  | [15](https://github.com/MariDaw/Proyecto-Aria/issues/15) |
 
 | **R16**     | **Almacenamiento en el lado del cliente**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Uso de mecanismos de almacenamiento en el lado del cliente.              |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Uso de mecanismos de almacenamiento en el lado del cliente.              |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [16](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/16) |
+| **Incidencia**  | [16](https://github.com/MariDaw/Proyecto-Aria/issues/16) |
 
 | **R17**     | **Alpine.js**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Uso de la librerÃ­a Alpine.js.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Uso de la librería Alpine.js.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [17](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/17) |
+| **Incidencia**  | [17](https://github.com/MariDaw/Proyecto-Aria/issues/17) |
 
 | **R18**     | **Plugin no trabajado en clase**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Incluir al menos un plugin no trabajado en clase.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Incluir al menos un plugin no trabajado en clase.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [18](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/18) |
+| **Incidencia**  | [18](https://github.com/MariDaw/Proyecto-Aria/issues/18) |
 
-| **R19**     | **UtilizaciÃ³n de AJAX**         |
+| **R19**     | **Utilización de AJAX**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | UtilizaciÃ³n de mecanismos de comunicaciÃ³n asÃ­ncrona: AJAX.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Utilización de mecanismos de comunicación asíncrona: AJAX.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [19](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/19) |
+| **Incidencia**  | [19](https://github.com/MariDaw/Proyecto-Aria/issues/19) |
 
 | **R20**     | **ECMAScript2015 (ES6)**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Uso de las nuevas incorporaciones del estÃ¡ndar ECMAScript2015 (ES6).             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Uso de las nuevas incorporaciones del estándar ECMAScript2015 (ES6).             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [20](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/20) |
+| **Incidencia**  | [20](https://github.com/MariDaw/Proyecto-Aria/issues/20) |
 
 | **R21**     | **PHP**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Usar PHP 8.0 Ã³ superior.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Usar PHP 8.0 ó superior.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [21](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/21) |
+| **Incidencia**  | [21](https://github.com/MariDaw/Proyecto-Aria/issues/21) |
 
 | **R22**     | **Laravel Framework**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Usar Laravel Framework 9.0 superior.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Usar Laravel Framework 9.0 superior.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [22](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/22) |
+| **Incidencia**  | [22](https://github.com/MariDaw/Proyecto-Aria/issues/22) |
 
 | **R23**     | **PostgreSQL**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Usar PostgreSQL versiÃ³n 12 Ã³ superior.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Usar PostgreSQL versión 12 ó superior.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [23](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/23) |
+| **Incidencia**  | [23](https://github.com/MariDaw/Proyecto-Aria/issues/23) |
 
 | **R24**     | **Cloud computing**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | 4. Despliegue de la aplicaciÃ³n en alguna plataforma de cloud computing (tipo Heroku, Fly.io, Railway o similar) a determinar por el profesor.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | 4. Despliegue de la aplicación en alguna plataforma de cloud computing (tipo Heroku, Fly.io, Railway o similar) a determinar por el profesor.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [24](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/24) |
+| **Incidencia**  | [24](https://github.com/MariDaw/Proyecto-Aria/issues/24) |
 
 | **R25**     | **Pruebas funcionales**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | CreaciÃ³n de pruebas funcionales.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Creación de pruebas funcionales.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [25](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/25) |
+| **Incidencia**  | [25](https://github.com/MariDaw/Proyecto-Aria/issues/25) |
 
-| **R26**     | **AplicaciÃ³n escalable**         |
+| **R26**     | **Aplicación escalable**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | La aplicaciÃ³n ha de ser escalable.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | La aplicación ha de ser escalable.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [26](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/26) |
+| **Incidencia**  | [26](https://github.com/MariDaw/Proyecto-Aria/issues/26) |
 
-| **R27**     | **Etiquetas semÃ¡nticas de HTML5**         |
+| **R27**     | **Etiquetas semánticas de HTML5**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Para estructurar el contenido se utilizarÃ¡n las etiquetas semÃ¡nticas de HTML5.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Para estructurar el contenido se utilizarÃ¡n las etiquetas semánticas de HTML5.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [27](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/27) |
+| **Incidencia**  | [27](https://github.com/MariDaw/Proyecto-Aria/issues/27) |
 
-| **R28**     | **PresentaciÃ³n mediante CSS**         |
+| **R28**     | **Presentación mediante CSS**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Todo lo relacionado con la presentaciÃ³n se trabajarÃ¡ mediante CSS.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Todo lo relacionado con la presentación se trabajará mediante CSS.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [28](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/28) |
+| **Incidencia**  | [28](https://github.com/MariDaw/Proyecto-Aria/issues/28) |
 
-| **R29**     | **DiseÃ±o flexible**         |
+| **R29**     | **Diseño flexible**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | El diseÃ±o serÃ¡ flexible.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | El diseño será flexible.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [29](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/29) |
+| **Incidencia**  | [29](https://github.com/MariDaw/Proyecto-Aria/issues/29) |
 
 | **R30**     | **Transiciones, transformaciones, animaciones y contenido multimedia**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | ExistirÃ¡n transiciones, transformaciones, animaciones y contenido multimedia.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Existirán transiciones, transformaciones, animaciones y contenido multimedia.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [30](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/30) |
+| **Incidencia**  | [30](https://github.com/MariDaw/Proyecto-Aria/issues/30) |
 
 | **R31**     | **Uso de microdatos**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Uso de microdatos.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Uso de microdatos.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [31](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/31) |
+| **Incidencia**  | [31](https://github.com/MariDaw/Proyecto-Aria/issues/31) |
 
-| **R32**     | **ValidaciÃ³n HTML5, CSS3 y accesibilidad**         |
+| **R32**     | **Validación HTML5, CSS3 y accesibilidad**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Se deberÃ¡ comprobar que el cÃ³digo realizado supera:  - El validador para HTML5, CSS3. - Nivel de accesibilidad AA. - Prueba del seis.              |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Se deberá comprobar que el código realizado supera:  - El validador para HTML5, CSS3. - Nivel de accesibilidad AA. - Prueba del seis.              |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [32](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/32) |
+| **Incidencia**  | [32](https://github.com/MariDaw/Proyecto-Aria/issues/32) |
 
-| **R33**     | **DiseÃ±o para varias resoluciones**         |
+| **R33**     | **Diseño para varias resoluciones**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Implementar el diseÃ±o para resoluciones grandes y pequeÃ±as.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Implementar el diseño para resoluciones grandes y pequeñas.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [33](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/33) |
+| **Incidencia**  | [33](https://github.com/MariDaw/Proyecto-Aria/issues/33) |
 
 | **R34**     | **Varios navegadores**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Comprobar que el diseÃ±o es correcto en los siguientes navegadores:  - Microsoft Edge. - Chrome. - Mozilla Firefox. - Opera.              |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Comprobar que el diseño es correcto en los siguientes navegadores:  - Microsoft Edge. - Chrome. - Mozilla Firefox. - Opera.              |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [34](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/34) |
+| **Incidencia**  | [34](https://github.com/MariDaw/Proyecto-Aria/issues/34) |
 
 | **R35**     | **Despliegue en un Host**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Realizar el despliegue en un Host:  - Utilizando algÃºn servicio gratuito de hosting como los vistos en clase  - Instalar / configurar o solicitar el software necesario para desplegar el proyecto.              |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Realizar el despliegue en un Host:  - Utilizando algún servicio gratuito de hosting como los vistos en clase  - Instalar / configurar o solicitar el software necesario para desplegar el proyecto.              |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [35](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/35) |
+| **Incidencia**  | [35](https://github.com/MariDaw/Proyecto-Aria/issues/35) |
 
 | **R36**     | **Despliegue en un servidor local**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Realizar un despliegue en un servidor local usando y configurando tres mÃ¡quinas virtuales para:  - Crear un servicio de Nombres de dominio. - Gestionar y administrar el servidor Apache tanto en Windows como Linux:   - Instalar el servidor y configurarlo.   - Configurar directivas.   - Usar directorios virtuales y redireccionamientos.   - Usar diferentes mÃ³dulos estÃ¡ticos y dinÃ¡micos.   - Usar autenticaciones.   - Usar ficheros de configuraciÃ³n personalizada de directorios.   - Usar HTTPS y certificados Digitales.              |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Realizar un despliegue en un servidor local usando y configurando tres máquinas virtuales para:  - Crear un servicio de Nombres de dominio. - Gestionar y administrar el servidor Apache tanto en Windows como Linux:   - Instalar el servidor y configurarlo.   - Configurar directivas.   - Usar directorios virtuales y redireccionamientos.   - Usar diferentes módulos estáticos y dinámicos.   - Usar autenticaciones.   - Usar ficheros de configuración personalizada de directorios.   - Usar HTTPS y certificados Digitales.              |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [36](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/36) |
+| **Incidencia**  | [36](https://github.com/MariDaw/Proyecto-Aria/issues/36) |
 
 | **R37**     | **Crear Base de datos**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Crear la base de datos con sus correspondientes tablas             |
+| **Descripción** | Crear la base de datos con sus correspondientes tablas             |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
-| **Complejidad** | FÃ¡cil         |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [37](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/37) |
+| **Incidencia**  | [37](https://github.com/MariDaw/Proyecto-Aria/issues/37) |
 
-| **R38**     | **Modo Invitado**         |
+| **R38**     | **Registro**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | El usuario podrÃ¡ ver las peliculas disponibles y los comentarios sin tener que iniciar sesiÃ³n             |
+| **Descripción** | Opción de registro al usuario, cuyos datos se guardarán en la base de datos.             |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
-| **Complejidad** | FÃ¡cil         |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [38](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/38) |
+| **Incidencia**  | [38](https://github.com/MariDaw/Proyecto-Aria/issues/38) |
 
-| **R39**     | **Registrarse**         |
+| **R39**     | **Iniciar sesión como usuario**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Registrarse como usuario en la aplicaciÃ³n             |
+| **Descripción** | Acceder al sitio web como usuario registrado.            |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
-| **Complejidad** | FÃ¡cil         |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [39](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/39) |
+| **Incidencia**  | [39](https://github.com/MariDaw/Proyecto-Aria/issues/39) |
 
-| **R40**     | **Iniciar sesiÃ³n**         |
+| **R40**     | **Cerrar sesión**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Iniciar sesiÃ³n en la aplicaciÃ³n             |
+| **Descripción** | El usuario puede cerrar sesión.             |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
-| **Complejidad** | FÃ¡cil         |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [40](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/40) |
+| **Incidencia**  | [40](https://github.com/MariDaw/Proyecto-Aria/issues/40) |
 
-| **R41**     | **Cerrar SesiÃ³n**         |
+| **R41**     | **Modo invitado**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Cerrar sesiÃ³n en la aplicaciÃ³n             |
+| **Descripción** | Cuando el usuario no ha iniciado sesión, sólo se le permite ver los productos.             |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
-| **Complejidad** | FÃ¡cil         |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [41](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/41) |
+| **Incidencia**  | [41](https://github.com/MariDaw/Proyecto-Aria/issues/41) |
 
-| **R42**     | **Modo Administrador**         |
+| **R42**     | **Modo usuario**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | La tienda tendrÃ¡ un administrador que se encargarÃ¡ del mantenimiento de la misma             |
+| **Descripción** | Cuando el usuario ha iniciado sesión, puede entrar en su perfil e interactuar
+con el sitio web.             |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
-| **Complejidad** | DifÃ­cil         |
+| **Complejidad** | Fácil         |
+| **Entrega**     | v1             |
+| **Incidencia**  | [42](https://github.com/MariDaw/Proyecto-Aria/issues/42) |
+
+| **R43**     | **Modo administrador**         |
+| --------------: | :------------------- |
+| **Descripción** | Existirá un usuario administrador que podra mantener la página.             |
+| **Prioridad**   | Importante           |
+| **Tipo**        | Funcional                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v2             |
-| **Incidencia**  | [42](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/42) |
-
-| **R43**     | **AÃ±adir GÃ©nero**         |
-| --------------: | :------------------- |
-| **DescripciÃ³n** | AÃ±adir gÃ©nero que corresponde a la base de datos             |
-| **Prioridad**   | Importante           |
-| **Tipo**        | Funcional                |
-| **Complejidad** | FÃ¡cil         |
-| **Entrega**     | v1             |
-| **Incidencia**  | [43](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/43) |
+| **Incidencia**  | [43](https://github.com/MariDaw/Proyecto-Aria/issues/43) |
 
 | **R44**     | **Modificar GÃ©nero**         |
 | --------------: | :------------------- |
