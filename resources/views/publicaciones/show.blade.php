@@ -97,8 +97,11 @@
                     <x-plantilla>
      <div class="bg-white">
 
-           <div class="mx-10 mt-0 pt-0  max-w-2xl px-4 sm:py-5 sm:px-6 lg:max-w-7xl lg:px-8  grid grid-cols-2 gap-2">
+         <a href="{{ route('publicaciones.index') }}" class="flex font-semibold justify-start text-indigo-600 text-sm mt-0 mb-5">
+             <svg class="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
 
+           </a>
+           <div class="mx-10 mt-0 pt-0  max-w-2xl px-4 sm:py-5 sm:px-6 lg:max-w-7xl lg:px-8  grid grid-cols-2 gap-2">
                 <div
                     class="mt-0 grid grid-cols-2 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 ">
 

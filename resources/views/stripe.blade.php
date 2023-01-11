@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <title></title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -7,35 +7,65 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <style type="text/css">
+        body {
+            background-color: rgba(255, 0, 0, 0.548);
+        }
+
+        .parent{
+            display: flex;
+            margin: 10% 10%;
+            border: 1px solid red;
+        }
+        .container {
+            justify-content: center;
+            border: 1px solid black;
+
+
+        }
+        .panel-default>.panel-heading{
+            background-color: white;
+
+        }
         .panel-title {
         display: inline;
+        text-align: center;
         font-weight: bold;
+        padding: 1%;
+        background-color: white;
+        font-family: 'Roboto Condensed', sans-serif;
         }
         .display-table {
             display: table;
+            background-color: white;
         }
         .display-tr {
             display: table-row;
+            background-color: white;
         }
         .display-td {
             display: table-cell;
             vertical-align: middle;
-            width: 61%;
+            width: 100%;
+            background-color: white;
         }
     </style>
 </head>
-<body class="bg-red-200">
+<body class="parent">
 
 <div class="container">
-
+    {{-- <a href="{{ route('productos.index') }}" idclass="flex font-semibold justify-start text-indigo-600 text-sm mt-10">
+        <svg class="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
+        Continue Shopping
+      </a> --}}
     <div class="row">
-        <div class="mt-36 col-md-6 col-md-offset-3">
+        <div class="mt-36 col-md-6 col-md-offset-3 bg-red-200">
             <div class="panel panel-default credit-card-box">
                 <div class="panel-heading display-table" >
                     <div class="row display-tr" >
-                        <h3 class="panel-title display-td" >Payment Details</h3>
-                        <div class="display-td" >
-                            <img class="img-responsive pull-right" src="img/tarjeta-de-credito.png">
+                        <h3 class="panel-title display-td">Payment Details</h3>
+                        <div class="display-td">
+                            <img class="img-responsive pull-right" src="public\img\favicon.png">
+
                         </div>
                     </div>
                 </div>
@@ -61,14 +91,14 @@
                         <div class='form-row row'>
                             <div class='col-xs-12 form-group required'>
                                 <label class='control-label'>Name on Card</label> <input
-                                    class='form-control' size='4' type='text'>
+                                    class='form-control' size='4' placeholder='ex. Juan' type='text'>
                             </div>
                         </div>
 
                         <div class='form-row row'>
                             <div class='col-xs-12 form-group card required'>
                                 <label class='control-label'>Card Number</label> <input
-                                    autocomplete='off' class='form-control card-number' size='20'
+                                    autocomplete='off' class='form-control card-number' placeholder='0000 0000 0000 0000' size='20'
                                     type='text'>
                             </div>
                         </div>
