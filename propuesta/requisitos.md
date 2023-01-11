@@ -1,13 +1,13 @@
-# CatÃ¡logo de requisitos
+# Catálogo de requisitos
 
 | **R1**     | **Requisitos como incidencias**         |
 | --------------: | :------------------- |
-| **DescripciÃ³n** | Requisitos perfectamente definidos y convertidos en incidencias (issues) de GitHub.             |
-| **Prioridad**   | MÃ­nimo           |
-| **Tipo**        | TÃ©cnico                |
-| **Complejidad** | FÃ¡cil         |
+| **Descripción** | Requisitos perfectamente definidos y convertidos en incidencias (issues) de GitHub.             |
+| **Prioridad**   | Mínimo           |
+| **Tipo**        | Técnico                |
+| **Complejidad** | Fácil         |
 | **Entrega**     | v1             |
-| **Incidencia**  | [1](https://github.com/Joaquin-1/Proyecto-BFJMJ/issues/1) |
+| **Incidencia**  | [1](https://github.com/MariDaw/Proyecto-Aria/issues/1) |
 
 | **R2**     | **CÃ³digo fuente**         |
 | --------------: | :------------------- |
