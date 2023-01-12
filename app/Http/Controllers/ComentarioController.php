@@ -119,5 +119,11 @@ class ComentarioController extends Controller
 
 
         return redirect()->back();
+
+        // $comentario = Comentario::find($id);
+
+        // $comentario->delete();
+
+        // return redirect()->back();
     }
 }

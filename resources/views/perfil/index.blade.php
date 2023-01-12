@@ -53,10 +53,10 @@
                                                         <p class="mt-1 text-sm text-gray-500">
                                                             {{ $save->publicacion->descripcion }}</p>
 
-                                                        {{-- <form action="{{ route('unsave', $publicacion) }}" method="POST">
+                                                        <form action="{{ route('unsave', $save) }}" method="POST">
                                                         @csrf
                                                         @method('POST')
-                                                        <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Unsave</button> --}}
+                                                        <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Unsave</button>
                                                     </form>
 
                                                         <p class="text-red-400">
