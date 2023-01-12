@@ -417,8 +417,7 @@ con el sitio web.             |
 
 | **R47**     | **Menú de nombres**         |
 | --------------: | :------------------- |
-| **Descripción** | Menú desplegable para ver los nombres disponibles.
-             |
+| **Descripción** | Menú desplegable para ver los nombres disponibles.|
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
@@ -427,8 +426,7 @@ con el sitio web.             |
 
 | **R48**     | **Dar “Me gusta” a una publicación**         |
 | --------------: | :------------------- |
-| **Descripción** |El usuario puede dar “Me gusta” a una publicación.
-            |
+| **Descripción** |El usuario puede dar “Me gusta” a una publicación.  |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
 | **Complejidad** | Media         |
