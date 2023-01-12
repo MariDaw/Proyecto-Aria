@@ -82,8 +82,9 @@ class ComentarioController extends Controller
      */
     public function destroy(Comentario $comentario)
     {
-        //
+
     }
+
 
     public function anadircomentario()
     {
@@ -101,6 +102,22 @@ class ComentarioController extends Controller
 
         return redirect()->back();
 
+    }
 
+    public function eliminarcomentario(Comentario $comentario) {
+
+
+
+        if ($comentario = Comentario::where('user_id', auth()->user()->id)->first())
+        {
+            $comentario->delete();
+        } else {
+            return redirect()->back()->with('success', 'No tienes permiso');
+        }
+
+
+
+
+        return redirect()->back();
     }
 }

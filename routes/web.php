@@ -52,6 +52,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::get('/show/producto{producto}', [ProductoController::class, 'show'])->name('show/producto');
 
+
+
+
     Route::resource('carritos', CarritoController::class);
 
     Route::resource('productos', ProductoController::class);
@@ -65,6 +68,9 @@ Route::middleware(['auth'])->group(function () {
 
     Route::post('/store/{publicacion}', [ValoracionController::class, 'store'])
     ->name('store');
+
+    Route::delete('/eliminarcomentario/{id}', [ComentarioController::class, 'eliminarcomentario'])
+        ->name('eliminarcomentario');
 
     Route::post('/publicaciones/save/{publicacion}', [SaveController::class, 'anadiralperfil'])
         ->name('anadiralperfil');

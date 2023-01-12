@@ -242,7 +242,17 @@
                                                                                         {{ $comentario->texto }}
                                                                                     </p>
                                                                                 </div>
+                                                                                <form action="{{route('eliminarcomentario', $comentario->id)}}" method="POST">
+                                                                                    @csrf
+                                                                                    @method('DELETE')
+                                                                                    {{-- <input type="hidden" name="_method" value="DELETE"> --}}
+                                                                                    @if (Auth::user()->id == $comentario->user_id)
+                                                                                        <button type="submit"  class="btn underline text-xs">Eliminar</button>
 
+                                                                                    @endif
+
+
+                                                                                 </form>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -250,10 +260,10 @@
                                                             @endforeach
                                                         </div>
 
-                                </div>
-                                </div>
-                                </div>
 
+                                </div>
+                                </div>
+                                </div>
 
                                 </div>
                                 </div>
@@ -273,6 +283,8 @@
                                   }
                                 });
                                 </script>
+
+
 
 
 </x-app-layout>
