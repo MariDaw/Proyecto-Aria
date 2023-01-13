@@ -17,7 +17,7 @@ class Filtrar extends Component
 
     use WithPagination;
 
-    
+    public $orden ="created_at";
 
     public $searchTerm;
 

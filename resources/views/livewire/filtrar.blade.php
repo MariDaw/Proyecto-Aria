@@ -19,6 +19,16 @@
         text-gray-700 mt-10 leading-tight focus:outline-none focus:shadow-outline placeholder-blue-400" name="" id="">
     </div>
 
+    <div>
+        <label for="orden" class="mr-4">Ordenar por:</label>
+        <select wire:model="orden" name="orden" id="orden">
+            <option value="precio">Likes</option>
+            <option value="duracion">Nombre</option>
+        </select>
+    </div>
+
+
+
        <div class="mx-auto  max-w-2xl py-5 px-4 sm:py-24 sm:px-6 lg:max-w-7xl lg:px-8">
             {{-- <h2 class="text-2xl font-bold tracking-tight text-gray-900">Customers also purchased</h2> --}}
 
@@ -35,6 +45,9 @@
                                                         class="h-full w-full object-cover object-center lg:h-full lg:w-full">
                                                     </a>
                                                     </div>
+
+
+
 
                                                 <div class="mt-4 flex justify-between">
                                                     <div>
@@ -70,7 +83,7 @@
 
                                             @endforeach
                                             {{ $publicaciones->links() }}
-                                            
+
                                 </x-plantilla>
                             </div>
                             </div>

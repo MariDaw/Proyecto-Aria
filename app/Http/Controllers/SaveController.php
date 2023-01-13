@@ -120,22 +120,6 @@ class SaveController extends Controller
     public function unsave($id)
     {
 
-
-        // if ($save = Save::where('publicacion_id', $publicacion->id)->where('user_id', auth()->user()->id)) {
-
-
-        //     $save->user_id = Auth::user()->id;
-        //     $save->publicacion_id = $publicacion->id;
-
-        //     $save->delete();
-
-        //     return redirect()->back()->with('success', 'Publicación añadida al perfil.');
-        // }
-
-        // $save->delete();
-
-        // return redirect()->back()->with('success', 'Publicación añadida al perfil.');
-
         $save = Save::find($id);
 
         $save->delete();
@@ -144,23 +128,5 @@ class SaveController extends Controller
     }
 
 
-    // public function unsave(Publicacion $publicacion)
-    // {
-    //     $save = Save::where('publicacion_id', $publicacion->id)->where('user_id', auth()->user()->id)->first();
 
-    //     if (empty($save)) {
-    //         $save = new Save();
-
-    //         $save->user_id = Auth::user()->id;
-    //         $save->publicacion_id = $publicacion->id;
-
-    //         $save->save();
-
-    //         return redirect()->back()->with('success', 'Publicación añadida al perfil.');
-    //     }
-
-    //     $save->save();
-
-    //     return redirect()->back()->with('success', 'Publicación añadida al perfil.');
-    // }
 }

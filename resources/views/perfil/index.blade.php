@@ -104,6 +104,12 @@
                                                         <p class="mt-1 text-sm text-gray-500">
                                                             {{ $savePro->producto->descripcion }}</p>
 
+                                                            <form action="{{ route('unproduct', $savePro) }}" method="POST">
+                                                                @csrf
+                                                                @method('POST')
+                                                                <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Unproduct</button>
+                                                            </form>
+
                                                     </form>
 
 

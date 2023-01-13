@@ -81,6 +81,9 @@ Route::middleware(['auth'])->group(function () {
         Route::post('/publicaciones/unsave/{publicacion}', [SaveController::class, 'unsave'])
         ->name('unsave');
 
+        Route::post('/productos/unproduct/{producto}', [SaveProController::class, 'unproduct'])
+        ->name('unproduct');
+
     Route::post('/anadircomentario', [ComentarioController::class, 'anadircomentario'])
     ->name('anadircomentario');
 

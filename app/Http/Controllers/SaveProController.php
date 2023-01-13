@@ -110,4 +110,14 @@ class SaveProController extends Controller
 
         return redirect()->back()->with('success', 'Producto añadido al perfil.');
     }
+
+    public function unproduct($id)
+    {
+
+        $savePros = SavePro::find($id);
+
+        $savePros->delete();
+
+        return redirect()->route('perfil.index');
+    }
 }

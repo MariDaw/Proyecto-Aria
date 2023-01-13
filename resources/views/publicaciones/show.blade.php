@@ -242,7 +242,7 @@
                                                                                         {{ $comentario->texto }}
                                                                                     </p>
                                                                                 </div>
-                                                                                <form action="{{route('eliminarcomentario', $comentario->id)}}" method="POST">
+                                                                                <form action="{{route('eliminarcomentario', ['id' => $comentario->id])}}" method="POST">
                                                                                     @csrf
                                                                                     @method('DELETE')
                                                                                     {{-- <input type="hidden" name="_method" value="DELETE"> --}}

@@ -104,11 +104,11 @@ class ComentarioController extends Controller
 
     }
 
-    public function eliminarcomentario(Comentario $comentario) {
+    public function eliminarcomentario($id) {
 
 
 
-        if ($comentario = Comentario::where('user_id', auth()->user()->id)->first())
+        if ($comentario = Comentario::where('user_id', auth()->user()->id)->find($id))
         {
             $comentario->delete();
         } else {
