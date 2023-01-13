@@ -25,19 +25,19 @@ class ProductoCategoriaSeeder extends Seeder
             ],
 
             ['producto_id'=> 3,
-            'categoria_id' => 3
+            'categoria_id' => 2
             ],
 
             ['producto_id'=> 4,
-            'categoria_id' => 4
+            'categoria_id' => 3
             ],
 
             ['producto_id'=> 5,
-            'categoria_id' => 4
+            'categoria_id' => 3
             ],
 
             ['producto_id'=> 6,
-            'categoria_id' => 4
+            'categoria_id' => 3
             ],
 
         ]);

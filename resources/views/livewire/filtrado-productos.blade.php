@@ -36,7 +36,7 @@
                                                 <h2 class="mt-2 text-sm text-gray-600">{{ $producto->descripcion }}</h2>
                                                 <p class="mt-1 text-lg font-medium text-gray-900">
                                                     {{ $producto->precio }}&euro;</p>
-                                                <div class="text-sm text-gray-900 ">
+                                                <div class=" flex text-sm text-gray-900 ">
                                                     <form action="{{ route('anadiralcarrito', $producto) }}"
                                                         method="POST">
                                                         @csrf
@@ -44,6 +44,12 @@
                                                         <button type="submit"
                                                             class="px-4 py-1 text-sm text-white bg-red-400 rounded">Añadir
                                                             al carrito</button>
+                                                    </form>
+                                                    <form action="{{ route('productoperfil', $producto) }}" method="POST">
+                                                        @csrf
+                                                        @method('POST')
+                                                        <button type="submit" class="px-4 py-1 text-sm ml-16 text-white mb-5 bg-black  rounded">Save</button>
+
                                                     </form>
 
                                                 </div>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\CarritoController;
 use App\Http\Controllers\PublicacionController;
@@ -40,8 +41,6 @@ Route::get('/', function () {
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
-
 
 
 Route::middleware(['auth'])->group(function () {

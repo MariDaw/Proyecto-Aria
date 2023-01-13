@@ -16,24 +16,24 @@ class PublicacionSeeder extends Seeder
     public function run()
     {
         DB::table('publicacions')->insert([
-            ['nombre'=> 'Kendall',
+            ['titulo'=> 'Kendall',
             'descripcion' => 'Milan Runaway',
             'foto' => 'fg',
             'famoso_id' => 1
             ],
 
-            ['nombre'=> 'Bella',
+            ['titulo'=> 'Bella',
             'descripcion' => 'Fashion Week',
             'foto' => 'fgg',
             'famoso_id' => 2        ],
 
-            ['nombre'=> 'Gigi',
+            ['titulo'=> 'Gigi',
             'descripcion' => 'Paris Runaway',
             'foto' => 'gg',
             'famoso_id' => 3
             ],
 
-            ['nombre'=> 'Rosalía',
+            ['titulo'=> 'Rosalía',
             'descripcion' => 'Music Awards',
             'foto' => 'ggh',
             'famoso_id' => 4

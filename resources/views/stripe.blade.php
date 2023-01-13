@@ -134,12 +134,12 @@
                             $precio += $carrito->producto->precio * $carrito->cantidad;
                         @endphp
                         @endforeach
+
                         <div class="row">
                             <div class="col-xs-12">
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ({{$precio}}&euro;)</button>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ({{$precio}})&euro;</button>
                             </div>
                         </div>
-
                     </form>
                 </div>
             </div>
