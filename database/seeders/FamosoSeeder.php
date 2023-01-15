@@ -28,6 +28,10 @@ class FamosoSeeder extends Seeder
             ['nombre'=> 'Rosalía',
             ],
 
+            ['nombre'=> 'Dua Lipa',
+            ],
+            
+
         ]);
     }
 }

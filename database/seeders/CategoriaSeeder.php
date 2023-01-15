@@ -25,6 +25,9 @@ class CategoriaSeeder extends Seeder
             ['nombre'=> 'Gorro',
             ],
 
+            ['nombre'=> 'Forrito',
+            ],
+
         ]);
     }
 }

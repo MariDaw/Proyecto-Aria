@@ -59,7 +59,7 @@ class Filtrar extends Component
             'publicaciones' =>	Publicacion::where(function($sub_query){
                 $sub_query->where('titulo', 'like', '%'.$this->searchTerm.'%')
                           ->orWhere('descripcion', 'like', '%'.$this->searchTerm.'%');
-            })->paginate(3),
+            })->paginate(4),
 
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,

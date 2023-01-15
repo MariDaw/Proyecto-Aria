@@ -18,25 +18,44 @@ class PublicacionSeeder extends Seeder
         DB::table('publicacions')->insert([
             ['titulo'=> 'Kendall',
             'descripcion' => 'Milan Runaway',
-            'foto' => 'fg',
+            'foto' => 'img/publicaciones/kendall1.jpg',
+            'famoso_id' => 1
+            ],
+
+            ['titulo'=> 'Kendall',
+            'descripcion' => 'NY Street',
+            'foto' => 'img/publicaciones/kendall2.jpg',
             'famoso_id' => 1
             ],
 
             ['titulo'=> 'Bella',
             'descripcion' => 'Fashion Week',
-            'foto' => 'fgg',
-            'famoso_id' => 2        ],
+            'foto' => 'img/publicaciones/bella1.jpg',
+            'famoso_id' => 2
+            ],
+
+            ['titulo'=> 'Bella',
+            'descripcion' => 'NY Street',
+            'foto' => 'img/publicaciones/bella2.jpg',
+            'famoso_id' => 2
+            ],
 
             ['titulo'=> 'Gigi',
             'descripcion' => 'Paris Runaway',
-            'foto' => 'gg',
+            'foto' => 'img/publicaciones/gigi1.jpg',
             'famoso_id' => 3
             ],
 
             ['titulo'=> 'Rosalía',
             'descripcion' => 'Music Awards',
-            'foto' => 'ggh',
+            'foto' => 'img/publicaciones/rosalia1.jpg',
             'famoso_id' => 4
+            ],
+
+            ['titulo'=> 'Dua Lipa',
+            'descripcion' => 'Music Awards',
+            'foto' => 'img/publicaciones/dualipa1.jpg',
+            'famoso_id' => 5
             ],
 
         ]);

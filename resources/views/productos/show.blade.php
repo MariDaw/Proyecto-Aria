@@ -32,9 +32,9 @@
                                             class=" aspect-w-1 aspect-h-1 w-[500px] h-[600px] overflow-hidden rounded-md bg-gray-200  ">
                                             <a href="{{ route('show/producto', [$producto]) }}">
 
-                                                <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                                                <img src="{{asset('public/img/Tienda/'.$producto->foto)}}"
                                                     alt="Front of men&#039;s Basic Tee in black."
-                                                    class="h-96 w-96 p-12  bg-white object-center lg:h-full lg:w-full">
+                                                    class="h-96 w-96 p-12  bg-white object-center lg:h-full lg:w-full">{{$producto->foto}}
                                             </a>
                                         </div>
                                         </div>

@@ -40,6 +40,14 @@ class ProductoCategoriaSeeder extends Seeder
             'categoria_id' => 3
             ],
 
+            ['producto_id'=> 7,
+            'categoria_id' => 4
+            ],
+
+            ['producto_id'=> 8,
+            'categoria_id' => 4
+            ],
+
         ]);
     }
 }

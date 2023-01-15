@@ -118,7 +118,12 @@
                                                         <a href="{{route('show/publicacion', [$publicacion])}}">
 
 
-                                                        <img src="https://tailwindui.com/img/ecommerce-images/product-page-01-related-product-01.jpg"
+                                                        {{-- <img  src="{!! asset('img/publicacion/'.$publicacion->foto) !!}"
+                                                            alt="Front of men&#039;s Basic Tee in black."
+                                                            class="h-96 w-96 object-cover object-center lg:h-full lg:w-full">
+                                                        </a> --}}
+
+                                                        <img  src="{{$publicacion->foto}}"
                                                             alt="Front of men&#039;s Basic Tee in black."
                                                             class="h-96 w-96 object-cover object-center lg:h-full lg:w-full">
                                                         </a>

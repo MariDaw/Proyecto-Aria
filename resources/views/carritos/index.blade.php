@@ -31,7 +31,7 @@
                                       <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
                                     <div class="flex w-2/5"> <!-- product -->
                                         <div class="w-20">
-                                          <img class="h-24" src="https://drive.google.com/uc?id=18KkAVkGFvaGNqPy2DIvTqmUH_nk39o3z" alt="">
+                                          <img class="h-24" src="{{$carrito->producto->foto}}" alt="">
                                         </div>
                                         <div class="flex flex-col justify-between ml-4 flex-grow">
                                           <span class="font-bold text-sm">{{ $carrito->producto->titulo}}</span>
@@ -81,7 +81,7 @@
                             <form action="{{route('stripe')}}" method="post">
                                 @csrf
                                 @method('POST')
-                                <button class="bg-green-300 text-black px-7 py-2" type="submit"> Realizar pedido</button>
+                                <button class="animate-bounce bg-green-300 text-black px-7 py-2" type="submit"> Realizar pedido</button>
                             </form>
                         </div>
 

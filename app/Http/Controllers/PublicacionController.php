@@ -60,12 +60,14 @@ class PublicacionController extends Controller
      */
     public function show(Publicacion $publicacion)
     {
+
         $valoraciones = Valoracion::all();
         $links = Link::all();
         return view('publicaciones.show', [
             'publicacion' => $publicacion,
             'valoraciones' => $valoraciones,
             'links' => $links,
+            
         ]);
     }
 
