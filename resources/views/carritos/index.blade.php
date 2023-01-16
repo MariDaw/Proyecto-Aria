@@ -81,7 +81,7 @@
                             <form action="{{route('stripe')}}" method="post">
                                 @csrf
                                 @method('POST')
-                                <button class="animate-bounce bg-green-300 text-black px-7 py-2" type="submit"> Realizar pedido</button>
+                                <button class="animate-bounce bg-black text-white px-7 py-2" type="submit"> Realizar pedido</button>
                             </form>
                         </div>
 

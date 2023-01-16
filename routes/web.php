@@ -9,10 +9,12 @@ use App\Http\Controllers\SaveController;
 use App\Http\Controllers\FamosoController;
 use App\Http\Controllers\ProductoController;
 use App\Http\Controllers\ComentarioController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\SaveProController;
 use App\Http\Controllers\StripePaymentController;
 use App\Http\Controllers\ValoracionController;
 use App\Http\Controllers\UserController;
+use App\Mail\ContactMail;
 use App\Models\Publicacion;
 use Illuminate\Support\Facades\Route;
 
@@ -43,16 +45,24 @@ Route::get('/dashboard', function () {
 })->middleware(['auth'])->name('dashboard');
 
 
+
+
+
 Route::middleware(['auth'])->group(function () {
 
 
 
     Route::get('/show/publicacion/{publicacion}', [PublicacionController::class, 'show'])->name('show/publicacion');
 
+
+
     Route::get('/show/producto{producto}', [ProductoController::class, 'show'])->name('show/producto');
 
+    Route::get('/contacto', function () {
+        return view('aria.contacto');
+    })->name('contacto');
 
-
+    Route::post('/correo', [ContactMail::class,'sendEmail'])->name('enviarCorreo');
 
     Route::resource('carritos', CarritoController::class);
 

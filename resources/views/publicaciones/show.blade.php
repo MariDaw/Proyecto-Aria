@@ -113,17 +113,12 @@
                                                             {{ $publicacion->famoso->nombre }}
                                                         </a>
                                                     </h2>
+                                                    
                                                     <div
                                                         class="aspect-w-1 aspect-h-1 w-[400px] h-[500px] overflow-hidden rounded-md bg-gray-200  ">
                                                         <a href="{{route('show/publicacion', [$publicacion])}}">
 
-
-                                                        {{-- <img  src="{!! asset('img/publicacion/'.$publicacion->foto) !!}"
-                                                            alt="Front of men&#039;s Basic Tee in black."
-                                                            class="h-96 w-96 object-cover object-center lg:h-full lg:w-full">
-                                                        </a> --}}
-
-                                                        <img  src="{{$publicacion->foto}}"
+                                                        <img  src="{!! asset('../'.$publicacion->foto) !!}"
                                                             alt="Front of men&#039;s Basic Tee in black."
                                                             class="h-96 w-96 object-cover object-center lg:h-full lg:w-full">
                                                         </a>
@@ -190,7 +185,7 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="flex grid-cols-2 ml-10 mt-12 w-2/3 h-1/2 rounded-xl border bg-gray-400 border-green-400">
+                                                            <div class="flex grid-cols-2 ml-10 mt-12 w-2/3 h-1/2 rounded-xl bg-gray-400 ">
                                                                 <div class="mx-10 mt-10 w-auto h-1/2 "><h1 class="text-3xl text-bold mb-5 text-black">PRENDAS</h1>
                                                                 @foreach ($publicacion->links as $link )
 

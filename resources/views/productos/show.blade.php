@@ -29,16 +29,16 @@
                                                    </h2> --}}
 
                                         <div
-                                            class=" aspect-w-1 aspect-h-1 w-[500px] h-[600px] overflow-hidden rounded-md bg-gray-200  ">
+                                            class=" ml-32 aspect-w-1 aspect-h-1 w-[400px] h-[500px] overflow-hidden rounded-md bg-gray-200  ">
                                             <a href="{{ route('show/producto', [$producto]) }}">
 
-                                                <img src="{{asset('public/img/Tienda/'.$producto->foto)}}"
-                                                    alt="Front of men&#039;s Basic Tee in black."
-                                                    class="h-96 w-96 p-12  bg-white object-center lg:h-full lg:w-full">{{$producto->foto}}
+                                                <img src="{{asset('../'.$producto->foto)}}"
+                                                    alt="Producto"
+                                                    class="h-96 w-96 p-12   bg-white object-center lg:h-full lg:w-full">{{$producto->foto}}
                                             </a>
                                         </div>
                                         </div>
-                                        <div class=" my-28 py-10 text-left pl-10 " style="font-family: 'Roboto Condensed', sans-serif">
+                                        <div class=" my-28 py-0 text-left pl-10 " style="font-family: 'Roboto Condensed', sans-serif">
                                         <h3 class="mb-0 text-4xl text-black text-bold ">{{ $producto->titulo }}</h3>
                                         <div class="border mb-5 mr-32 border-b-2"></div>
                                         <a href="{{ route('productos.index') }}" class=" text-xs text-lime-600 border-b-black-2">Comprar todo Aria</a>
