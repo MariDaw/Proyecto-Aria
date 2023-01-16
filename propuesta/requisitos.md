@@ -516,8 +516,7 @@ con el sitio web.             |
 
 | **R58**     | **Eliminar perfil**         |
 | --------------: | :------------------- |
-| **Descripción** | Un usuario podrá eliminar su perfil en el sitio web.
-|
+| **Descripción** | Un usuario podrá eliminar su perfil en el sitio web.|
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
