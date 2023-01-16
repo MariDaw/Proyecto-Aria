@@ -28,23 +28,24 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+/* ----
+    Página inicial, usuario no logueado
+---*/
 Route::get('/', function () {
-    return view('welcome');
+    return view('aria.index');
 });
 
-// Route::get('/', function () {
-//     return view('aria.index');
-// })->name('index');
+// El usuario no logueado solo puede ver la vista de las publicaciones
+Route::get('/publicacion', function () {
+    return view('aria.publicaciones');
+});
 
-// Route::get('/', function () {
-//     return view('aria.notuser');
-// });
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
-
-
 
 
 

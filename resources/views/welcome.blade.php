@@ -96,6 +96,12 @@
                 font-family: 'Roboto', sans-serif;
             }
         </style>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+
+
+
+        <!-- Scripts -->
+        <script src="{{ asset('js/app.js') }}" defer></script>
     </head>
     <body class="antialiased">
 
@@ -107,13 +113,13 @@
             </header>
             <nav id="menu">
                 <ul id="home">
-                  <li><a href="{{ route('dashboard') }}"><img class="flex ml-0  hover:scale-110" src="{{url('../img/hogar.png') }}" alt="Home"></a></li>
+                  <li><a href="#"><img class="flex ml-0  hover:scale-110" src="{{url('../img/hogar.png') }}" alt="Home"></a></li>
                 </ul>
                 <ul id="posts">
-                    <li><a href="{{ route('login') }}"><img class="flex ml-0 hover:scale-110" src="{{url('../img/brujula.png') }}" alt="Publicaciones"></a></li>
+                    <li><a href="{{ route('publicaciones') }}"><img class="flex ml-0 hover:scale-110" src="{{url('../img/brujula.png') }}" alt="Publicaciones"></a></li>
                 </ul>
                 <ul id="tienda">
-                    <li><a href="{{ route('login') }}"><img class="flex ml-0 hover:scale-110" src="{{url('../img/shop.png') }}" alt="Tienda"></a></li>
+                    <li><a href=""><img class="flex ml-0 hover:scale-110" src="{{url('../img/shop.png') }}" alt="Tienda"></a></li>
                 </ul>
               </nav>
 
@@ -121,9 +127,7 @@
               <div id="subtitle">
                 <h1>Home</h1>
               </div>
-                {{-- <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                    {{ __('Home') }}
-                </h2> --}}
+
 
 
 

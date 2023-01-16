@@ -28,7 +28,7 @@ class ProductoSeeder extends Seeder
             'precio' => 9.99        ],
 
             ['titulo'=> 'Pantalón',
-            'foto' => 'img/Tienda/pantalon1.jpg',
+            'foto' => 'img/Tienda/pantalon2.jpg',
             'descripcion' => 'Mon Jeans',
             'precio' => 29.99
             ],
@@ -58,7 +58,7 @@ class ProductoSeeder extends Seeder
             ],
 
             ['titulo'=> 'Forrito',
-            'foto' => 'img/Tienda/forrito2.jpg',
+            'foto' => 'img/Tienda/forrito3.jpg',
             'descripcion' => 'Forrito de lana',
             'precio' => 25.99
             ],

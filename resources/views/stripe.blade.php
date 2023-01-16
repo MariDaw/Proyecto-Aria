@@ -19,12 +19,7 @@
 
 
         <!-- Styles -->
-        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
-
-
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
 
 
 
@@ -32,19 +27,17 @@
 
     <style type="text/css">
         body {
-            background-color: rgba(255, 0, 0, 0.548);
+            background-color: rgba(255, 0, 0, 0.267);
+            /* background-image: url('../img/fondo.png'); */
+
         }
 
         .parent{
             display: flex;
             margin: 10% 10%;
-            border: 1px solid red;
         }
         .container {
             justify-content: center;
-            border: 1px solid black;
-
-
         }
         .panel-default>.panel-heading{
             background-color: white;
@@ -74,21 +67,21 @@
         }
     </style>
 </head>
-<body class="parent">
+<body class="parent" class="">
 
 <div class="container">
-    {{-- <a href="{{ route('productos.index') }}" idclass="flex font-semibold justify-start text-indigo-600 text-sm mt-10">
-        <svg class="fill-current mr-2 text-indigo-600 w-4" viewBox="0 0 448 512"><path d="M134.059 296H436c6.627 0 12-5.373 12-12v-56c0-6.627-5.373-12-12-12H134.059v-46.059c0-21.382-25.851-32.09-40.971-16.971L7.029 239.029c-9.373 9.373-9.373 24.569 0 33.941l86.059 86.059c15.119 15.119 40.971 4.411 40.971-16.971V296z"/></svg>
-        Continue Shopping
-      </a> --}}
+    <a href="{{ route('productos.index') }}" class="flex font-semibold justify-start text-indigo-600 text-sm mt-3">
+
+        Volver
+      </a>
     <div class="row">
         <div class="mt-36 col-md-6 col-md-offset-3 bg-red-200">
             <div class="panel panel-default credit-card-box">
                 <div class="panel-heading display-table" >
                     <div class="row display-tr" >
-                        <h3 class="panel-title display-td">Payment Details</h3>
+                        <h3 class="panel-title display-td">Detalles del pago</h3>
                         <div class="display-td">
-                            <img class="img-responsive pull-right" src="public\img\favicon.png">
+                            <img src="img/tarjeta-de-credito.png" class="img-responsive pull-right" >
 
                         </div>
                     </div>
@@ -114,14 +107,14 @@
 
                         <div class='form-row row'>
                             <div class='col-xs-12 form-group required'>
-                                <label class='control-label'>Name on Card</label> <input
+                                <label class='control-label'>Nombre</label> <input
                                     class='form-control' size='4' placeholder='ex. Juan' type='text'>
                             </div>
                         </div>
 
                         <div class='form-row row'>
                             <div class='col-xs-12 form-group card required'>
-                                <label class='control-label'>Card Number</label> <input
+                                <label class='control-label'>Número de Tarjeta</label> <input
                                     autocomplete='off' class='form-control card-number' placeholder='0000 0000 0000 0000' size='20'
                                     type='text'>
                             </div>
@@ -134,12 +127,12 @@
                                     type='text'>
                             </div>
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                <label class='control-label'>Expiration Month</label> <input
+                                <label class='control-label'>Mes de Expiración</label> <input
                                     class='form-control card-expiry-month' placeholder='MM' size='2'
                                     type='text'>
                             </div>
                             <div class='col-xs-12 col-md-4 form-group expiration required'>
-                                <label class='control-label'>Expiration Year</label> <input
+                                <label class='control-label'>Año de Expiración</label> <input
                                     class='form-control card-expiry-year' placeholder='YYYY' size='4'
                                     type='text'>
                             </div>
@@ -161,7 +154,7 @@
 
                         <div class="row">
                             <div class="col-xs-12">
-                                <button class="btn btn-primary btn-lg btn-block" type="submit">Pay Now ({{$precio}})&euro;</button>
+                                <button class="btn btn-primary btn-lg  btn-block" type="submit">Pagar ({{$precio}})&euro;</button>
                             </div>
                         </div>
                     </form>

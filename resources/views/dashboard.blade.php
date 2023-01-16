@@ -7,12 +7,12 @@
 
     </x-slot>
 
-    <div class="py-12 border-2 mt-0">
+    <div class="py-12 mx-10 mt-0">
         <div class="max-w-auto mx-auto sm:px-2 lg:px-0 ">
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg px-10 py-4">
                 <div class="p-6 bg-white border-b border-gray-200">
                     <a href="{{ route('publicaciones.index') }}" class="flex font-semibold justify-start text-indigo-600 text-sm mt-2">
-                        See more!
+                        Ver más!
                       </a>
                     <div class="flex ">
                         <a href="{{ route('publicaciones.index') }}" class=""><img class="border-1 m-2 w-60 h-96 hover:scale-105" src="img/home2.jpg"  alt="Home Explorer"></a>
@@ -21,7 +21,7 @@
                         <a href="{{ route('publicaciones.index') }}" class=""><img class="border-1 m-2 w-60 h-96 hover:scale-105" src="img/home1.jpg"  alt="Home Explorer"></a>
                     </div>
                     <div class="border-b-2 border-black mt-7 ">
-                        <h3 class="text-xl text-black ">OUR BRANDS!</h3>
+                        <h3 class="text-xl text-black ">NUESTRAS MARCAS!</h3>
                     </div>
                     <div class="flex ">
                         <a href="https://www2.hm.com/es_es/index.html"><img class="border-1 m-2" src="img/hym.jpg" width="150px" height="150px" alt="Brands"></a>
