@@ -570,8 +570,7 @@ con el sitio web.             |
 
 | **R64**     | **Añadir comentario**         |
 | --------------: | :------------------- |
-| **Descripción** | Añadir comentarios a una publicación.
-            |
+| **Descripción** | Añadir comentarios a una publicación. |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
 | **Complejidad** | Difícil         |
