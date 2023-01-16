@@ -516,8 +516,7 @@ con el sitio web.             |
 
 | **R58**     | **Eliminar perfil**         |
 | --------------: | :------------------- |
-| **Descripción** | Un usuario podrá eliminar su perfil en el sitio web.
-|
+| **Descripción** | Un usuario podrá eliminar su perfil en el sitio web.|
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
 | **Complejidad** | Fácil         |
@@ -571,8 +570,7 @@ con el sitio web.             |
 
 | **R64**     | **Añadir comentario**         |
 | --------------: | :------------------- |
-| **Descripción** | Añadir comentarios a una publicación.
-            |
+| **Descripción** | Añadir comentarios a una publicación. |
 | **Prioridad**   | Importante           |
 | **Tipo**        | Funcional                |
 | **Complejidad** | Difícil         |
