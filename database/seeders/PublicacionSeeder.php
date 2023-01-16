@@ -53,8 +53,14 @@ class PublicacionSeeder extends Seeder
             ],
 
             ['titulo'=> 'Dua Lipa',
-            'descripcion' => 'Music Awards',
+            'descripcion' => 'London Street',
             'foto' => 'img/publicaciones/dualipa1.jpg',
+            'famoso_id' => 5
+            ],
+
+            ['titulo'=> 'Dua Lipa',
+            'descripcion' => 'Music Awards',
+            'foto' => 'img/publicaciones/dualipa2.jpg',
             'famoso_id' => 5
             ],
 
