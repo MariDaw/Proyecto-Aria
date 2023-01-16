@@ -185,11 +185,11 @@
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="flex grid-cols-2 ml-10 mt-12 w-2/3 h-1/2 rounded-xl bg-gray-300 ">
+                                                            <div class="flex grid-cols-2 ml-10 mt-12 w-2/3 h-2/3 rounded-xl bg-gray-300 ">
                                                                 <div class="mx-10 mt-10 w-auto h-1/2 "><h1 class="text-3xl text-extrabold mb-5 text-black">PRENDAS</h1>
                                                                 @foreach ($publicacion->links as $link )
 
-                                                                <li class="m-0"> <span class="text-bold text-black">{{$link->prenda}}</span></br><a class="text-indigo-600 text-extrabold text-base hover:text-lg m-0 h-1/3" href="{{$link->url}}">{{$link->url}}</a></li>
+                                                                <li class="m-0"> <span class="text-bold text-black">{{$link->prenda}}</span></br><a class="text-indigo-600 text-extrabold text-sm hover:text-base m-0 h-1/3" href="{{$link->url}}">{{$link->url}}</a></li>
                                                                 @endforeach
                                                             </div>
                                                             </div>

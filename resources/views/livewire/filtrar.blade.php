@@ -70,10 +70,9 @@
                                                             <br>
                                                              <!-- Likes publicaciones -->
                                                             <p class="animate-bounced text-red-400">
-                                                                @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null) //Si no tiene likes == 0
-                                                                0 likes
+                                                                @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null)
                                                                 @else
-                                                                 {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}} //Si tiene likes, llama al count
+                                                                 {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}} 
                                                                     likes
                                                                 @endif
                                                                 </p>
