@@ -9,30 +9,14 @@ use Livewire\Component;
 use Livewire\WithPagination;
 
 class FiltradoProductos extends Component
-{   public $productoSelect = 'All';
+{   public $productoSelect = 'All'; //Devuelve todos los productos
 
     use WithPagination;
 
-    // public $active;
-    // public $q;
-
+    /* Menú desplegable de productos*/
 
     public function render()
     {
-
-        // $productos = Producto::where('titulo', $this->productoSelect)
-        //             ->when( $this->productoSelect, function($query) {
-        //                 return $query->where(function ($query) {
-        //                     $query->where('titulo', 'like', '%'.$this->productoSelect . '%');
-        //                 })->paginate(4);
-
-        //             })
-
-        //     ->when($this->active, function( $query){
-        //         return $query->active();
-        //     });
-            // $query = $productos->toSql();
-
 
         $productos = Producto::all();
 

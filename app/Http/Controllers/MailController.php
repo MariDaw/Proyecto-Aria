@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Mail;
 
 class MailController extends Controller
 {
-    //
+    // Función para enviar email en la zona de contacto #Error
 
     public function sendEmail(Request $request)
     {

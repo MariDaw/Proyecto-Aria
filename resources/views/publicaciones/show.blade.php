@@ -267,7 +267,7 @@
 
                                 </div>
                                 </div>
-
+                                 <!-- Script pulsar likes -->
                                 <script defer>
                                     const button = document.querySelector(".heart-like-button");
                                     if (button.classList.contains("liked")) {

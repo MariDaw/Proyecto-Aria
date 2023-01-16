@@ -91,6 +91,8 @@ class SaveProController extends Controller
         //
     }
 
+    /* Función que añade un producto al perfil*/
+
     public function productoperfil(Producto $producto)
     {
         $savePros = SavePro::where('producto_id', $producto->id)->where('user_id', auth()->user()->id)->first();
@@ -110,6 +112,8 @@ class SaveProController extends Controller
 
         return redirect()->back()->with('success', 'Producto añadido al perfil.');
     }
+
+    /* Función que elimina un producto del perfil*/
 
     public function unproduct($id)
     {

@@ -88,6 +88,8 @@ class ValoracionController extends Controller
      * @param  \App\Models\Valoracion  $valoracion
      * @return \Illuminate\Http\Response
      */
+    /* Función que borra like a una publicación*/
+
     public function destroy(Publicacion $publicacion)
     {
         while (count(Valoracion::where('user_id', Auth::user()->id)->where('publicacion_id', $publicacion->id)->get()) > 0) {
@@ -97,6 +99,8 @@ class ValoracionController extends Controller
 
         return redirect()->back();
     }
+
+    /* Función para dar like a una publicación*/
 
     public static function isLiked(Publicacion $publicacion)
     {

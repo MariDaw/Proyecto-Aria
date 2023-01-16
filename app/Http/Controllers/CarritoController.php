@@ -93,6 +93,7 @@ class CarritoController extends Controller
         //
     }
 
+    /* Función que añade productos al carrito*/
     public function anadiralcarrito(Producto $producto)
     {
         $carrito = Carrito::where('producto_id', $producto->id)->where('user_id', auth()->user()->id)->first();
@@ -116,6 +117,7 @@ class CarritoController extends Controller
         return redirect()->route('productos.index')->with('success', 'Producto anadido al carrito.');
     }
 
+    /* Función que resta un producto del carrito*/
     public function restar(Carrito $carrito)
     {
 
@@ -132,6 +134,7 @@ class CarritoController extends Controller
         return redirect()->route('carritos.index')->with('success', 'Producto restado al carrito.');
     }
 
+    /* Función que suma productos del carrito*/
     public function sumar(Carrito $carrito)
     {
         $carrito->cantidad += 1;
@@ -140,6 +143,7 @@ class CarritoController extends Controller
         return redirect()->route('carritos.index')->with('success', 'Producto sumado al carrito.');
     }
 
+    /* Función que vacia el carrito*/
     public function vaciar()
     {
         $carrito = Carrito::where('user_id', auth()->user()->id);
@@ -148,13 +152,7 @@ class CarritoController extends Controller
         return redirect()->route('carritos.index')->with('success', 'Carrito vaciado con exito.');
     }
 
-    public function total(Carrito $carrito)
-    {
-        $carrito->cantidad += 1;
-        $carrito->save();
-
-        return redirect()->route('carritos.index')->with('success', 'Producto sumado al carrito.');
-    }
+    
 
     public function stripe()
     {

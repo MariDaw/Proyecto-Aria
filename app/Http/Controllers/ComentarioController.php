@@ -85,7 +85,7 @@ class ComentarioController extends Controller
 
     }
 
-
+    /* Función que añade un comentario */
     public function anadircomentario()
     {
         $validados = request()->validate([
@@ -104,9 +104,8 @@ class ComentarioController extends Controller
 
     }
 
+    /* Función que elimina un comentario*/
     public function eliminarcomentario($id) {
-
-
 
         if ($comentario = Comentario::where('user_id', auth()->user()->id)->find($id))
         {
@@ -115,15 +114,7 @@ class ComentarioController extends Controller
             return redirect()->back()->with('success', 'No tienes permiso');
         }
 
-
-
-
         return redirect()->back();
 
-        // $comentario = Comentario::find($id);
-
-        // $comentario->delete();
-
-        // return redirect()->back();
     }
 }

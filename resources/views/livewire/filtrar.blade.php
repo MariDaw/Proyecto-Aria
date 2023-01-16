@@ -20,6 +20,7 @@
         text-gray-700 mt-5 leading-tight focus:outline-none focus:shadow-outline placeholder-blue-400" name="" id="">
     </div>
 
+     <!-- Ordenar por likes, no me ha dado tiempo -->
     {{-- <div>
         <label for="orden" class="mr-4">Ordenar por:</label>
         <select wire:model="orden" name="orden" id="orden">
@@ -67,11 +68,12 @@
                                                                 <button type="submit" class="px-4 py-1 text-sm text-white bg-red-400 rounded">Save</button>
                                                             </form>
                                                             <br>
+                                                             <!-- Likes publicaciones -->
                                                             <p class="animate-bounced text-red-400">
-                                                                @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null)
+                                                                @if ($valoraciones->where('publicacion_id', $publicacion->id)->first() == null) //Si no tiene likes == 0
                                                                 0 likes
                                                                 @else
-                                                                 {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}}
+                                                                 {{$valoraciones->where('publicacion_id', $publicacion->id)->count()}} //Si tiene likes, llama al count
                                                                     likes
                                                                 @endif
                                                                 </p>

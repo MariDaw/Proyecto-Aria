@@ -67,7 +67,7 @@ class PublicacionController extends Controller
             'publicacion' => $publicacion,
             'valoraciones' => $valoraciones,
             'links' => $links,
-            
+
         ]);
     }
 
@@ -105,25 +105,5 @@ class PublicacionController extends Controller
         //
     }
 
-    // public function like(): void
-    // {
-    //     if ($this->post->isLiked()) {
-    //         $this->post->removeLike();
-
-    //         $this->count--;
-    //     } elseif (auth()->user()) {
-    //         $this->post->likes()->create([
-    //             'user_id' => auth()->id(),
-    //         ]);
-
-    //         $this->count++;
-    //     } elseif (($ip = request()->ip()) && ($userAgent = request()->userAgent())) {
-    //         $this->post->likes()->create([
-    //             'ip' => $ip,
-    //             'user_agent' => $userAgent,
-    //         ]);
-
-    //         $this->count++;
-    //     }
-    // }
+    
 }

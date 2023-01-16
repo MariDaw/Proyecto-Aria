@@ -97,6 +97,7 @@ class SaveController extends Controller
         //
     }
 
+    /* Función que añade una publicación al perfil*/
     public function anadiralperfil(Publicacion $publicacion)
     {
         $save = Save::where('publicacion_id', $publicacion->id)->where('user_id', auth()->user()->id)->first();
@@ -116,6 +117,8 @@ class SaveController extends Controller
 
         return redirect()->back()->with('success', 'Publicación añadida al perfil.');
     }
+
+    /* Función que quita una publicación del perfil*/
 
     public function unsave($id)
     {

@@ -29,7 +29,7 @@
                                       </div>
                                       @foreach ($carritos as $carrito)
                                       <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
-                                    <div class="flex w-2/5"> <!-- product -->
+                                    <div class="flex w-2/5"> <!-- producto -->
                                         <div class="w-20">
                                           <img class="h-24" src="{{$carrito->producto->foto}}" alt="">
                                         </div>
@@ -62,6 +62,7 @@
                                       <span class="text-center w-1/5 font-semibold text-sm">{{ $carrito->producto->precio * $carrito->cantidad }}</span>
                                     </div>
                                     @php
+                                        // Para calcular el precio total
                                         $precio += $carrito->producto->precio * $carrito->cantidad;
                                     @endphp
                                 @endforeach

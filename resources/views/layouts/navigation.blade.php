@@ -16,29 +16,29 @@
         <!-- Navigation Links -->
         <div class="hidden w-full space-x-0 sm:-my-px  sm:flex " style="background-color: WHITE;">
             <div class="w-52 py-2 px-3" style="background-color: #2bce90d0; display:flex; justify-content:center; align-items:center;">
-                <x-nav-link :href="route('dashboard')" >
+                <x-nav-link :href="route('dashboard')" > <!-- Home -->
                     <img class="flex ml-12 hover:scale-110" src="{{url('../img/hogar.png') }}" alt="Home">
                 </x-nav-link>
             </div>
             <div class="w-52 py-2 px-3" style="background-color: #7283E1; display:flex; justify-content:center; align-items:center;">
-                <x-nav-link :href="route('publicaciones.index')" :active="request()->routeIs('publicaciones.index')">
+                <x-nav-link :href="route('publicaciones.index')" :active="request()->routeIs('publicaciones.index')"> <!-- Publicaciones -->
                     <img class="flex ml-12 hover:scale-110" src="{{url('../img/brujula.png') }}" alt="Publicaciones">
                 </x-nav-link>
             </div>
             <div class="bg-yellow-200 w-52 py-2 px-3" style="background-color: #fcde468a; display:flex; justify-content:center; align-items:center; ">
-            <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">
+            <x-nav-link :href="route('productos.index')" :active="request()->routeIs('productos.index')">  <!-- Productos -->
                 <img class="flex ml-12 hover:scale-110" src="{{url('../img/shop.png') }}" alt="Tienda">
             </x-nav-link>
             </div>
             <div class="bg-blue-400 w-52 py-2 px-3" style="background-color: #FF0505; display:flex; justify-content:center; align-items:center;">
-            <x-nav-link :href="route('carritos.index')" :active="request()->routeIs('carritos.index')">
+            <x-nav-link :href="route('carritos.index')" :active="request()->routeIs('carritos.index')">  <!-- Carrito -->
                 <img class="flex ml-12 hover:scale-110" src="{{url('../img/carrito.png') }}" alt="Carrito" > ({{ Auth::user()->carritos()->sum('cantidad') }})
             </x-nav-link>
 
             </div>
 
             <div class="bg-green-300 w-52 py-2 px-3" style="background-color: #7283E1; display:flex; justify-content:center; align-items:center;">
-            <x-nav-link :href="route('perfil.index')" :active="request()->routeIs('perfil.index')">
+            <x-nav-link :href="route('perfil.index')" :active="request()->routeIs('perfil.index')">  <!-- Perfil -->
                 <img class="flex ml-12 hover:scale-110" src="{{url('../img/user.png') }}" alt="Perfil" >
             </x-nav-link>
             </div>

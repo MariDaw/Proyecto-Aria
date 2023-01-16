@@ -16,6 +16,7 @@ class StripePaymentController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
     public function stripe()
     {
         $carritos = Carrito::all();
@@ -25,12 +26,15 @@ class StripePaymentController extends Controller
         ]);
     }
 
-    
+
     /**
      * success response method.
      *
      * @return \Illuminate\Http\Response
      */
+
+    /* Función pago con tarjeta de crédito*/
+
     public function stripePost( Request $request)
     {
 

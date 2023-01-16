@@ -92,14 +92,4 @@ class CategoriaController extends Controller
         //
     }
 
-    public function viewcategory($slug){
-        if(Categoria::where('slug', $slug)->exists()){
-            $categorias = Categoria::where('slug', $slug)->first();
-            $productos = Producto::where('cateId', $categorias->id)->where('status','1')->get();
-            return view('admin.products.display', compact('category','products'));
-        }
-        else{
-            return redirect('/dashboard')->with('status',"Slug does not exist");
-        }
-    }
 }

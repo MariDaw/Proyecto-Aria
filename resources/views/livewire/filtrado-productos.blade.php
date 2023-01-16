@@ -6,6 +6,7 @@
                     <x-plantilla>
 
                         <div class="bg-white">
+                             <!-- Menú Desplegable con livewire -->
                             <select name="productoSelect" id="productoSelect" wire:model="productoSelect">
                                 <option value="All" selected>All</option>
                                 @foreach ($categorias as $categoria)
@@ -37,6 +38,7 @@
                                                 <p class="mt-1 text-lg font-medium text-gray-900">
                                                     {{ $producto->precio }}&euro;</p>
                                                 <div class=" flex text-sm text-gray-900 ">
+                                                     <!-- Añadir al carrito -->
                                                     <form action="{{ route('anadiralcarrito', $producto) }}"
                                                         method="POST">
                                                         @csrf
@@ -45,6 +47,7 @@
                                                             class="px-4 py-1 text-sm text-white bg-red-400 rounded">Añadir
                                                             al carrito</button>
                                                     </form>
+                                                     <!-- Añadir producto al perfil -->
                                                     <form action="{{ route('productoperfil', $producto) }}" method="POST">
                                                         @csrf
                                                         @method('POST')

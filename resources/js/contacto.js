@@ -1,4 +1,4 @@
-/*FORMULARIO*/
+/*----FORMULARIO CONTACTO-----*/
 if (document.getElementById("btnenviar")) {
     let btnenviar = document.getElementById("btnenviar");
     let nombre = document.querySelector('#nombre');
@@ -7,7 +7,7 @@ if (document.getElementById("btnenviar")) {
     nombre.addEventListener('input', validarNombre);
     email.addEventListener('blur', validar);
 }
-/* Hay que vaciar el valor de todos los elementos del formulario con setCustomValidity porque se queda guardado la cadena introducida anteriormente */
+/* Limpiar formulario */
 function limpiarCustomvaliditi() {
     let formulario = document.querySelector('.form');
     for (const elemento of formulario.elements) {

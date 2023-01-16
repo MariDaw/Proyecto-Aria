@@ -29,18 +29,6 @@ class Filtrar extends Component
     public function render()
     {
 
-        // $publicaciones = Famoso::where('nombre', $this->busqueda)
-        //     ->when($this->busqueda, function ($query) {
-        //         return $query->where(function ($query) {
-        //             $query->where('nombre', 'ilike', "%$this->busqueda%");
-        //         }
-        //         );
-
-        //     });
-
-
-
-
         if ($this->famosoSelect == 'All')
         {
             $publicaciones = Publicacion::all();
@@ -59,7 +47,7 @@ class Filtrar extends Component
             'publicaciones' =>	Publicacion::where(function($sub_query){
                 $sub_query->where('titulo', 'like', '%'.$this->searchTerm.'%')
                           ->orWhere('descripcion', 'like', '%'.$this->searchTerm.'%');
-            })->paginate(4),
+            })->paginate(4), //Buscador de publicaciones y paginación
 
             'famosos' => $famosos,
             'valoraciones' => $valoraciones,

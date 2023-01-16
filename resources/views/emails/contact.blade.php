@@ -1,3 +1,4 @@
+//Correo informativo que llega a 'aria.web.plan@gmail.com'
 <h2>Hey, It's me {{ $data['nombre'] }}</h2>
 <br>
 
